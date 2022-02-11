@@ -50,4 +50,4 @@ def employees_vaccines():
 if __name__ == "__main__":
 
     #Start the app on port 3000, it will be different once hosted
-    app.run(port=port, debug=True)
+    app.run(port=35699, debug=True)
