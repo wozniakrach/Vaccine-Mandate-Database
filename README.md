@@ -1,1 +1,3 @@
 # Vaccine-Mandate-Database
+
+test
