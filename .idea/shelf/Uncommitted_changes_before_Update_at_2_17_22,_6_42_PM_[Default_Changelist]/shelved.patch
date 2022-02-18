@@ -1,0 +1,109 @@
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_2_10_22,_2_56_PM_[Default_Changelist]/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_2_10_22,_2_56_PM_[Default_Changelist]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_2_10_22,_2_56_PM_[Default_Changelist]/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_2_10_22,_2_56_PM_[Default_Changelist]/shelved.patch	(revision 6d5849da95256e42bbc437336d4c038a0ba8a55e)
++++ /dev/null	(revision 6d5849da95256e42bbc437336d4c038a0ba8a55e)
+@@ -1,35 +0,0 @@
+-Index: app.py
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+>from flask import Flask, render_template, json, redirect\nfrom flask_mysqldb import MySQL\nfrom flask import request\nimport os\n\napp = Flask(__name__)\n\napp.config['MYSQL_HOST'] = 'classmysql.engr.oregonstate.edu'\napp.config['MYSQL_USER'] = 'cs340_wozniakr'\napp.config['MYSQL_PASSWORD'] = '5824'\napp.config['MYSQL_DB'] = 'cs340_wozniakr'\napp.config['MYSQL_CURSORCLASS'] = \"DictCursor\"\n\n\nmysql = MySQL(app)\n\n\n# Routes\n@app.route('/')\ndef root():\n    #query = \"SELECT * FROM diagnostic;\"\n    #cur = mysql.connection.cursor()\n    #cur.execute(query)\n    #results = cur.fetchall()\n    #return results[0]\n    return render_template(\"index.html\")\n\n@app.route('/employees')\ndef employees():\n    return render_template(\"employees.html\")\n\n@app.route('/worksites')\ndef worksites():\n    return render_template(\"worksites.html\")\n\n@app.route('/exemptions')\ndef exemptions():\n    return render_template(\"exemptions.html\")\n\n@app.route('/vaccines')\ndef vaccines():\n    return render_template(\"vaccines.html\")\n\n@app.route('employees_vaccines')\ndef employees_vaccines():\n    return render_template(\"employees_vaccines.html\")\n\n\n# Listener\nif __name__ == \"__main__\":\n\n    #Start the app on port 3000, it will be different once hosted\n    app.run(port=35699, debug=True)
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/app.py b/app.py
+---- a/app.py	(revision f879656231bc0c44fb7d4af3204036de4197a43f)
+-+++ b/app.py	(date 1644477554391)
+-@@ -1,5 +1,5 @@
+- from flask import Flask, render_template, json, redirect
+--from flask_mysqldb import MySQL
+-+#from flask_mysqldb import MySQL
+- from flask import request
+- import os
+- 
+-@@ -12,7 +12,7 @@
+- app.config['MYSQL_CURSORCLASS'] = "DictCursor"
+- 
+- 
+--mysql = MySQL(app)
+-+#mysql = MySQL(app)
+- 
+- 
+- # Routes
+-@@ -41,7 +41,7 @@
+- def vaccines():
+-     return render_template("vaccines.html")
+- 
+--@app.route('employees_vaccines')
+-+@app.route('/employees_vaccines')
+- def employees_vaccines():
+-     return render_template("employees_vaccines.html")
+- 
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_2_10_22__2_56_PM__Default_Changelist_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_2_10_22__2_56_PM__Default_Changelist_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_2_10_22__2_56_PM__Default_Changelist_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_2_10_22__2_56_PM__Default_Changelist_.xml	(revision 6d5849da95256e42bbc437336d4c038a0ba8a55e)
++++ /dev/null	(revision 6d5849da95256e42bbc437336d4c038a0ba8a55e)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_2_10_22,_2_56_PM_[Default_Changelist]" date="1644533788858" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_10_22,_2_56_PM_[Default_Changelist]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 2/10/22, 2:56 PM [Default Changelist]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_2_10_22__4_46_PM__Default_Changelist_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_2_10_22__4_46_PM__Default_Changelist_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_2_10_22__4_46_PM__Default_Changelist_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_2_10_22__4_46_PM__Default_Changelist_.xml	(revision 6d5849da95256e42bbc437336d4c038a0ba8a55e)
++++ /dev/null	(revision 6d5849da95256e42bbc437336d4c038a0ba8a55e)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_2_10_22,_4_46_PM_[Default_Changelist]" date="1644540401655" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_10_22,_4_46_PM_[Default_Changelist]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 2/10/22, 4:46 PM [Default Changelist]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_2_10_22,_4_46_PM_[Default_Changelist]/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_2_10_22,_4_46_PM_[Default_Changelist]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_2_10_22,_4_46_PM_[Default_Changelist]/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_2_10_22,_4_46_PM_[Default_Changelist]/shelved.patch	(revision 6d5849da95256e42bbc437336d4c038a0ba8a55e)
++++ /dev/null	(revision 6d5849da95256e42bbc437336d4c038a0ba8a55e)
+@@ -1,17 +0,0 @@
+-Index: app.py
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+>from flask import Flask, render_template, json, redirect\n#from flask_mysqldb import MySQL\nfrom flask import request\nimport os\n\napp = Flask(__name__)\n\napp.config['MYSQL_HOST'] = 'classmysql.engr.oregonstate.edu'\napp.config['MYSQL_USER'] = 'cs340_wozniakr'\napp.config['MYSQL_PASSWORD'] = '5824'\napp.config['MYSQL_DB'] = 'cs340_wozniakr'\napp.config['MYSQL_CURSORCLASS'] = \"DictCursor\"\n\n\n#mysql = MySQL(app)\n\n\n# Routes\n@app.route('/')\ndef root():\n    #query = \"SELECT * FROM diagnostic;\"\n    #cur = mysql.connection.cursor()\n    #cur.execute(query)\n    #results = cur.fetchall()\n    #return results[0]\n    return render_template(\"index.html\")\n\n@app.route('/employees')\ndef employees():\n    return render_template(\"employees.html\")\n\n@app.route('/worksites')\ndef worksites():\n    return render_template(\"worksites.html\")\n\n@app.route('/exemptions')\ndef exemptions():\n    return render_template(\"exemptions.html\")\n\n@app.route('/vaccines')\ndef vaccines():\n    return render_template(\"vaccines.html\")\n\n@app.route('/employees_vaccines')\ndef employees_vaccines():\n    return render_template(\"employees_vaccines.html\")\n\n\n# Listener\nif __name__ == \"__main__\":\n\n    #Start the app on port 3000, it will be different once hosted\n    app.run(port=35699, debug=True)
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/app.py b/app.py
+---- a/app.py	(revision e174afe4c6de627f5fd67a1bb8e74032bdd5ea79)
+-+++ b/app.py	(date 1644540376135)
+-@@ -50,4 +50,4 @@
+- if __name__ == "__main__":
+- 
+-     #Start the app on port 3000, it will be different once hosted
+--    app.run(port=35699, debug=True)
+-\ No newline at end of file
+-+    app.run(port=port, debug=True)
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"2180b1b6-79b8-4ac1-a176-bd7ca31788f6\" name=\"Default Changelist\" comment=\"\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/static/css/global.css\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/static/css/global.css\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/templates/employees_vaccines.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/templates/employees_vaccines.html\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitSEFilterConfiguration\">\n    <file-type-list>\n      <filtered-out-file-type name=\"LOCAL_BRANCH\" />\n      <filtered-out-file-type name=\"REMOTE_BRANCH\" />\n      <filtered-out-file-type name=\"TAG\" />\n      <filtered-out-file-type name=\"COMMIT_BY_MESSAGE\" />\n    </file-type-list>\n  </component>\n  <component name=\"ProjectId\" id=\"24uOY3jGnLSUx0sHd9QwVcXY5re\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\n  </component>\n  <component name=\"RunManager\">\n    <configuration name=\"app\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"Vaccine-Mandate-Database\" />\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\n      <option name=\"PARENT_ENVS\" value=\"true\" />\n      <envs>\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\n      </envs>\n      <option name=\"SDK_HOME\" value=\"\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$\" />\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/app.py\" />\n      <option name=\"PARAMETERS\" value=\"\" />\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\n      <option name=\"MODULE_MODE\" value=\"false\" />\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\n      <option name=\"INPUT_FILE\" value=\"\" />\n      <method v=\"2\" />\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"Python.app\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"2180b1b6-79b8-4ac1-a176-bd7ca31788f6\" name=\"Default Changelist\" comment=\"\" />\n      <created>1644477050868</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1644477050868</updated>\n    </task>\n    <servers />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 6d5849da95256e42bbc437336d4c038a0ba8a55e)
++++ b/.idea/workspace.xml	(date 1645152133730)
+@@ -3,8 +3,6 @@
+   <component name="ChangeListManager">
+     <list default="true" id="2180b1b6-79b8-4ac1-a176-bd7ca31788f6" name="Default Changelist" comment="">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/static/css/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/global.css" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/templates/employees_vaccines.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/employees_vaccines.html" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
