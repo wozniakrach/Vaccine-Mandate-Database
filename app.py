@@ -37,7 +37,7 @@ def employees():
             if exemption == "N/A":
                 exemption = None
             insert_query = "INSERT INTO Employees (first_name, last_name, birthdate, termed, site_id, exemption_id) VALUES (%s, %s, %s, %s, %s, %s)" % (fname, lname, birthdate, termed, site, exemption)
-            return insert_query
+            print(insert_query)
     select_query = "SELECT * FROM Employees;"
     cursor = mysql.connection.cursor()
     cursor.execute(select_query)
