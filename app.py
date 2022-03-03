@@ -1,5 +1,5 @@
 from flask import Flask, render_template, json, redirect
-#from flask_mysqldb import MySQL
+from flask_mysqldb import MySQL
 from flask import request
 import os
 
@@ -11,8 +11,7 @@ app.config['MYSQL_PASSWORD'] = '5824'
 app.config['MYSQL_DB'] = 'cs340_wozniakr'
 app.config['MYSQL_CURSORCLASS'] = "DictCursor"
 
-
-#mysql = MySQL(app)
+mysql = MySQL(app)
 
 
 # Routes
@@ -25,9 +24,14 @@ def root():
     #return results[0]
     return render_template("home.html")
 
-@app.route('/employees')
+@app.route('/employees', methods=["POST", "GET"])
 def employees():
-    return render_template("employees.html")
+    if request.method == "GET":
+        select_query = "SELECT * FROM Employees;"
+        cursor = mysql.connection.cursor(MySQL.cursors.DictCursor)
+        cursor.execute(select_query)
+        employees_table = cursor.fetchall()
+    return render_template("employees.html", employees_table=employees_table)
 
 @app.route('/worksites')
 def worksites():
