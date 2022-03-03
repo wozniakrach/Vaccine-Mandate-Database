@@ -54,7 +54,7 @@
         <td>{{employee['first_name']}}</td>
         <td>{{employee['last_name']}}</td>
         <td>{{employee['birthdate']}}</td>
-        {% if employee['termed'] == 0 %}
+        {% if employee['termed'] == "b'0x00'" %}
         <td>False</td>
         {% endif %}
         {% if employee['termed'] != 0 %}
