@@ -30,7 +30,8 @@ def employees():
     cursor = mysql.connection.cursor()
     cursor.execute(select_query)
     employees_table = cursor.fetchall()
-    return render_template("employees.html", employees_table=employees_table)
+    return employees_table
+    #return render_template("employees.html", employees_table=employees_table)
 
 @app.route('/worksites')
 def worksites():
