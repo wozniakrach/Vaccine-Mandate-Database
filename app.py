@@ -26,11 +26,10 @@ def root():
 
 @app.route('/employees', methods=["POST", "GET"])
 def employees():
-    if True:
-        select_query = "SELECT * FROM Employees;"
-        cursor = mysql.connection.cursor(MySQL.cursors.DictCursor)
-        cursor.execute(select_query)
-        employees_table = cursor.fetchall()
+    select_query = "SELECT * FROM Employees;"
+    cursor = mysql.connection.cursor(MySQL.cursors.DictCursor)
+    cursor.execute(select_query)
+    employees_table = cursor.fetchall()
     return render_template("employees.html", employees_table=employees_table)
 
 @app.route('/worksites')
