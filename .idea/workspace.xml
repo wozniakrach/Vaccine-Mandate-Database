@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2180b1b6-79b8-4ac1-a176-bd7ca31788f6" name="Default Changelist" comment="parenthesis" />
+    <list default="true" id="2180b1b6-79b8-4ac1-a176-bd7ca31788f6" name="Default Changelist" comment="j2">
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/employees.j2" beforeDir="false" afterPath="$PROJECT_DIR$/templates/employees.j2" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -159,7 +162,28 @@
       <option name="project" value="LOCAL" />
       <updated>1646338842950</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="test if statement">
+      <created>1646338996975</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1646338996975</updated>
+    </task>
+    <task id="LOCAL-00014" summary="typo">
+      <created>1646339044296</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1646339044296</updated>
+    </task>
+    <task id="LOCAL-00015" summary="j2">
+      <created>1646339204242</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1646339204242</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,6 +212,9 @@
     <MESSAGE value="mismatched bracket" />
     <MESSAGE value="add if else for termed bit display" />
     <MESSAGE value="parenthesis" />
-    <option name="LAST_COMMIT_MESSAGE" value="parenthesis" />
+    <MESSAGE value="test if statement" />
+    <MESSAGE value="typo" />
+    <MESSAGE value="j2" />
+    <option name="LAST_COMMIT_MESSAGE" value="j2" />
   </component>
 </project>

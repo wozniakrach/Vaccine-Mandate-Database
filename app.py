@@ -29,8 +29,8 @@ def employees():
     select_query = "SELECT * FROM Employees;"
     cursor = mysql.connection.cursor()
     cursor.execute(select_query)
-    employees_table = cursor.fetchall()
-    return render_template("employees.j2", employees_table=employees_table)
+    data = cursor.fetchall()
+    return render_template("employees.j2", employees_table=data)
 
 @app.route('/worksites')
 def worksites():
