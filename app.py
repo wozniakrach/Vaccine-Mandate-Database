@@ -27,7 +27,7 @@ def root():
 @app.route('/employees', methods=["POST", "GET"])
 def employees():
     select_query = "SELECT * FROM Employees;"
-    cursor = mysql.connection.cursor(MySQL.cursors.DictCursor)
+    cursor = mysql.connection.cursor()
     cursor.execute(select_query)
     employees_table = cursor.fetchall()
     return render_template("employees.html", employees_table=employees_table)

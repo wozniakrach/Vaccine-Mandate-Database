@@ -50,8 +50,13 @@
     </thead>
     {% for employee in employees_table %}
     <tr>
-        {% for key in employee.keys() %}
-        <td>{{employee[key]}}</td>
+        <td>{{employee['employee_id']}}</td>
+        <td>{{employee['first_name']}}</td>
+        <td>{{employee['last_name']}}</td>
+        <td>{{employee['birthdate']}}</td>
+        <td>{{employee['termed']}}</td>
+        <td>{{employee['site_id']}}</td>
+        <td>{{employee['exemption_id']}}</td>
         {% endfor %}
         <td><button>Update</button><button>Delete</button></td>
     </tr>
