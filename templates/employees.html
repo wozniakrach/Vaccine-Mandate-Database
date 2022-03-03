@@ -54,7 +54,12 @@
         <td>{{employee['first_name']}}</td>
         <td>{{employee['last_name']}}</td>
         <td>{{employee['birthdate']}}</td>
-        <td>{{employee['termed']}}</td>
+        {% if employee['termed'] == "b'\x00'" %}
+        <td>False</td>
+        {% endif %}
+        {% if employee['termed'] == "b'\x01'" %}
+        <td>True</td>
+        {% endif %}
         <td>{{employee['site_id']}}</td>
         <td>{{employee['exemption_id']}}</td>
         <td><button>Update</button><button>Delete</button></td>
