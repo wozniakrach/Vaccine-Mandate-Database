@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2180b1b6-79b8-4ac1-a176-bd7ca31788f6" name="Default Changelist" comment="test decode bits and attempt to formulate query for insert">
+    <list default="true" id="2180b1b6-79b8-4ac1-a176-bd7ca31788f6" name="Default Changelist" comment="select query for worksites">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/employees.j2" beforeDir="false" afterPath="$PROJECT_DIR$/templates/employees.j2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/worksites.j2" beforeDir="false" afterPath="$PROJECT_DIR$/templates/worksites.j2" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +219,28 @@
       <option name="project" value="LOCAL" />
       <updated>1646343331307</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="test query creation">
+      <created>1646344012548</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1646344012548</updated>
+    </task>
+    <task id="LOCAL-00022" summary="test query creation">
+      <created>1646344159220</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1646344159220</updated>
+    </task>
+    <task id="LOCAL-00023" summary="select query for worksites">
+      <created>1646344585058</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1646344585058</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,6 +274,8 @@
     <MESSAGE value="j2" />
     <MESSAGE value="if statement" />
     <MESSAGE value="test decode bits and attempt to formulate query for insert" />
-    <option name="LAST_COMMIT_MESSAGE" value="test decode bits and attempt to formulate query for insert" />
+    <MESSAGE value="test query creation" />
+    <MESSAGE value="select query for worksites" />
+    <option name="LAST_COMMIT_MESSAGE" value="select query for worksites" />
   </component>
 </project>
