@@ -6,7 +6,7 @@
 
 {% block body %}
 <h1 class="page-title">Employees</h1>
-<form>
+<form action="{{url_for('employees')}}" method="POST">
     <fieldset class="add-entity">
         <legend>Add Employee</legend>
         <label for="fname">First Name: </label>
@@ -54,11 +54,12 @@
         <td>{{employee['first_name']}}</td>
         <td>{{employee['last_name']}}</td>
         <td>{{employee['birthdate']}}</td>
-        {% if employee['termed'] == "b'\x00'" %}
+        {% if employee['termed'].decode('ascii') == 0 %}
         <td>False</td>
+        <td>{{employee['termed'].decode('ascii')</td>
         {% endif %}
-        {% if employee['termed'] != 0 %}
-        <td>{{employee['termed']}}</td>
+        {% if employee['termed'].decode('ascii') != 0 %}
+        <td>True</td>
         {% endif %}
         <td>{{employee['site_id']}}</td>
         <td>{{employee['exemption_id']}}</td>

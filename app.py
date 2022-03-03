@@ -26,6 +26,20 @@ def root():
 
 @app.route('/employees', methods=["POST", "GET"])
 def employees():
+    if request.method == "POST":
+        if request.form.get("employee-submit"):
+            fname = request.form["fname"]
+            lname = request.form["lname"]
+            birthdate = request.form["birthdate"]
+            termed = request.form["termed"]
+            site = request.form["site"]
+            exemption = request.form["exemption"]
+            if exemption == "N/A":
+                exemption = None
+            insert_query = "INSERT INTO Employees (first_name, last_name, birthdate, termed, site_id, exemption_id) VALUES (%s, %s, %s, %s, %s, %s)"
+            cursor = mysql.connection.cursor()
+            cursor.execute(insert_query, (fname, lname, birthdate, termed, site, exemption))
+            mysql.connection.commit()
     select_query = "SELECT * FROM Employees;"
     cursor = mysql.connection.cursor()
     cursor.execute(select_query)
