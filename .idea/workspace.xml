@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2180b1b6-79b8-4ac1-a176-bd7ca31788f6" name="Default Changelist" comment="comment out broken code">
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+    <list default="true" id="2180b1b6-79b8-4ac1-a176-bd7ca31788f6" name="Default Changelist" comment="test decode on b">
       <change beforePath="$PROJECT_DIR$/templates/employees.j2" beforeDir="false" afterPath="$PROJECT_DIR$/templates/employees.j2" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -260,7 +259,21 @@
       <option name="project" value="LOCAL" />
       <updated>1646345462054</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="mismatched bracket">
+      <created>1646345652367</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1646345652368</updated>
+    </task>
+    <task id="LOCAL-00028" summary="test decode on b">
+      <created>1646345726206</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1646345726206</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,7 +299,6 @@
     <MESSAGE value="test updates" />
     <MESSAGE value="get employee data from db" />
     <MESSAGE value="test returned data" />
-    <MESSAGE value="mismatched bracket" />
     <MESSAGE value="add if else for termed bit display" />
     <MESSAGE value="parenthesis" />
     <MESSAGE value="test if statement" />
@@ -299,6 +311,8 @@
     <MESSAGE value="mismatched brackets" />
     <MESSAGE value="employee table display" />
     <MESSAGE value="comment out broken code" />
-    <option name="LAST_COMMIT_MESSAGE" value="comment out broken code" />
+    <MESSAGE value="mismatched bracket" />
+    <MESSAGE value="test decode on b" />
+    <option name="LAST_COMMIT_MESSAGE" value="test decode on b" />
   </component>
 </project>
