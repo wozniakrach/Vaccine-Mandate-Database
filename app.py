@@ -26,7 +26,7 @@ def root():
 
 @app.route('/employees', methods=["POST", "GET"])
 def employees():
-    if request.method == "GET":
+    if True:
         select_query = "SELECT * FROM Employees;"
         cursor = mysql.connection.cursor(MySQL.cursors.DictCursor)
         cursor.execute(select_query)
