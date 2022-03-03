@@ -60,6 +60,7 @@
         {% endif %}
         {% if (employee['termed'].decode('ascii') != 0) %}
         <td>True</td>
+        <td>{{employee['termed'].decode()}}</td>
         {% endif %}
         <td>{{employee['site_id']}}</td>
         <td>{{employee['exemption_id']}}</td>
