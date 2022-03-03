@@ -46,7 +46,11 @@ def employees():
 
 @app.route('/worksites')
 def worksites():
-    return render_template("worksites.html")
+    select_query = "SELECT * FROM Worksites;"
+    cursor = mysql.connection.cursor()
+    cursor.execute(select_query)
+    data = cursor.fetchall()
+    return render_template("worksites.j2", worksites_table=data)
 
 @app.route('/exemptions')
 def exemptions():

@@ -35,34 +35,15 @@
         <th>Manager First Name</th>
         <th>Manager Last Name</th>
     </thead>
+    {% for site in worksites_table %}
     <tr>
-        <td>1</td>
-        <td>Chesterfield</td>
-        <td>Distribution Center</td>
-        <td>John</td>
-        <td>Doe</td>
+        <td>{{site['site_id']}}</td>
+        <td>{{site['location'}}</td>
+        <td>{{site['department'}}</td>
+        <td>{{site['manager_first']}}</td>
+        <td>{{site['manager_last']}}</td>
     </tr>
-     <tr>
-        <td>2</td>
-        <td>Midlothian</td>
-        <td>Factory</td>
-        <td>Jane</td>
-        <td>Doe</td>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>Alexandria</td>
-        <td>Sales</td>
-        <td>Katherine</td>
-        <td>Smith</td>
-    </tr>
-    <tr>
-        <td>4</td>
-        <td>Richmond</td>
-        <td>Marketing</td>
-        <td>Christopher</td>
-        <td>Evans</td>
-    </tr>
+    {% endfor %}
 </table>
 
 {% endblock %}
