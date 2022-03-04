@@ -75,7 +75,11 @@ def vaccines():
 
 @app.route('/employees_vaccines')
 def employees_vaccines():
-    return render_template("employees_vaccines.j2")
+    select_query = "SELECT * FROM Employees_Vaccines;"
+    cursor = mysql.connection.cursor()
+    cursor.execute(select_query)
+    data = cursor.fetchall()
+    return render_template("employees_vaccines.j2", table_data=data)
 
 
 # Listener

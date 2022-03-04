@@ -62,45 +62,15 @@
         <th>Dose</th>
         <th></th>
     </thead>
+    {% for entry in table_data %}
     <tr>
-        <td>1</td>
-        <td>1</td>
-        <td>2</td>
-        <td>2022-01-01</td>
-        <td>1</td>
+        <td>{{entry['employee_vaccine_id']}}</td>
+        <td>{{entry['employee_id']}}</td>
+        <td>{{entry['vaccine_id']}}</td>
+        <td>{{entry['date_administered']}}</td>
+        <td>{{entry['dose']}}</td>
         <td><button>Delete</button></td>
     </tr>
-    <tr>
-        <td>2</td>
-        <td>1</td>
-        <td>2</td>
-        <td>2022-02-01</td>
-        <td>2</td>
-        <td><button>Delete</button></td>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>1</td>
-        <td>2</td>
-        <td>2022-03-01</td>
-        <td>3</td>
-        <td><button>Delete</button></td>
-    </tr>
-     <tr>
-        <td>4</td>
-        <td>4</td>
-        <td>1</td>
-        <td>2021-10-14</td>
-        <td>1</td>
-        <td><button>Delete</button></td>
-    </tr>
-    <tr>
-        <td>5</td>
-        <td>4</td>
-        <td>1</td>
-        <td>2021-11-14</td>
-        <td>2</td>
-        <td><button>Delete</button></td>
-    </tr>
+    {% endfor %}
 </table>
 {% endblock %}
