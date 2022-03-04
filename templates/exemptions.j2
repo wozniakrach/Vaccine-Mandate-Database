@@ -6,20 +6,20 @@
 
 {% block body %}
 <h1 class="page-title">Exemptions</h1>
-<form>
+<form action="{{url_for('exemptions')}}" method="POST">
     <fieldset class="add-entity">
         <legend>Add Exemption</legend>
         <label for="exemptionid">Exemption ID: </label>
         <input type="text" id="exemptionid"/>
         <br>
         <label>Status: </label>
-        <input type="radio" id="true" name="status" value="1">
+        <input type="radio" id="true" name="exemption_status" value="1">
         <label for="true">has exemption</label>
-        <input type="radio" id="false" name="status" value="0">
+        <input type="radio" id="false" name="exemption_status" value="0">
         <label for="false">no exemption</label><br>
         <label for="type">Exemption Type: </label>
-        <input type="text" id="type"/><br>
-        <input type="submit" id="exemption-submit">
+        <input type="text" name="exemption_type"/><br>
+        <input type="submit" name="exemption-submit">
     </fieldset>
 </form>
 <table class="entity-table">

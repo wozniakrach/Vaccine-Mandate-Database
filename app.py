@@ -49,7 +49,7 @@ def employees():
             # redirect back to Employees page
             return redirect("/employees")
 
-    # Separate out the request methods, in this case this is for a GET
+    # Display Employees table
     if request.method == "GET":
         select_query = "SELECT * FROM Employees;"
         cursor = mysql.connection.cursor()
@@ -84,7 +84,7 @@ def worksites():
         # Redirect back to Worksites page
         return redirect("/worksites")
 
-    # Separate out the request methods, in this case this is for a GET
+    # Display Worksites table
     if request.method == "GET":
         select_query = "SELECT * FROM Worksites;"
         cursor = mysql.connection.cursor()
@@ -95,18 +95,15 @@ def worksites():
 
 @app.route('/exemptions', methods=["POST", "GET"])
 def exemptions():
-    # Separate out the request methods, in this case this is for a POST
-    # Insert an exemption into the Exemptions entity
+    # Insert an exemption into the Exemptions table
     if request.method == "POST":
-        
-        # If user wants to add an Exemption
-        if request.form.get("Add Exemption"):
+        if request.form.get("exemption-submit"):
             exemption_id = request.form["exemption_id"]
             exemption_status = request.form["exemption_status"]
             exemption_type = request.form["exemption_type"]
 
             # Account for null exemption_type
-            if exemption_type == "0":
+            if exemption_type is None:
                 query = "INSERT INTO Exemptions (exemption_id, exemption_status) VALUES (%s, %s)"
                 cur = mysql.connection.cursor()
                 cur.execute(query, (exemption_id, exemption_status))
@@ -120,9 +117,9 @@ def exemptions():
                 mysql.connection.commit()
 
             # redirect back to Exemptions page
-            return redirect("/Exemptions")
+            return redirect("/exemptions")
 
-    # Separate out the request methods, in this case this is for a GET
+    # Display Exemptions table
     select_query = "SELECT * FROM Exemptions;"
     cursor = mysql.connection.cursor()
     cursor.execute(select_query)
