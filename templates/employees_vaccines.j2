@@ -12,14 +12,14 @@
         <label>Employee ID: </label>
         <select name="empid">
             {% for id in employee_options %}
-            <option value="{{id}}">{{id}}</option>
+            <option value="{{id['employee_id']}}">{{id['employee_id']}}</option>
             {% endfor %}
         </select>
         <br>
         <label>Vaccine ID: </label>
         <select name="vaccid">
             {% for id in vaccine_options %}
-            <option value="{{id}}">{{id}}</option>
+            <option value="{{id['vaccine_id']}}">{{id['vaccine_id']}}</option>
             {% endfor %}
         </select>
         <br>
@@ -43,7 +43,7 @@
     <p>Search by Employee ID: </p>
     <select name="id">
         {% for id in employee_options %}
-        <option value="{{id}}">{{id}}</option>
+        <option value="{{id['employee_id']}}">{{id['employee_id']}}</option>
         {% endfor %}
     </select>
     <br>

@@ -26,13 +26,13 @@
         <label>Site ID: </label>
         <select name="site">
             {% for id in site_options %}
-            <option value="{{id}}">{{id}}</option>
+            <option value="{{id['site_id']}}">{{id['site_id']}}</option>
             {% endfor %}
         </select><br>
         <label>Exemption ID: </label>
         <select name="exemption">
             {% for id in exemption_options %}
-            <option value="{{id}}">{{id}}</option>
+            <option value="{{id['exemption_id']}}">{{id['exemption_id']}}</option>
             {% endfor %}
             <option value="N/A">N/A</option>
         </select><br>
