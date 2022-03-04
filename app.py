@@ -42,22 +42,20 @@ def employees():
 
             # Account for null exemption_id
             if exemption_id == "N/A":
-                query = "INSERT INTO Employees (first_name, last_name, birthdate, termed, site_id) " \
-                        "VALUES (%s, %s, %s, %s, %s)"
+                query = "INSERT INTO Employees (first_name, last_name, birthdate, termed, site_id) VALUES (%s, %s, %s, %s, %s)"
                 cur = mysql.connection.cursor()
                 cur.execute(query, (first_name, last_name, birthdate, termed, site_id))
                 mysql.connection.commit()
 
             # If there are no null inputs
             else:
-                query = "INSERT INTO Employees (first_name, last_name, birthdate, termed, site_id, exemption_id) " \
-                        "VALUES (%s, %s, %s, %s, %s, %s)"
+                query = "INSERT INTO Employees (first_name, last_name, birthdate, termed, site_id, exemption_id) VALUES (%s, %s, %s, %s, %s, %s)"
                 cur = mysql.connection.cursor()
                 cur.execute(query, (first_name, last_name, birthdate, termed, site_id, exemption_id))
                 mysql.connection.commit()
-
-                # redirect back to Employees page
-                return redirect("/Employees")
+                
+            # redirect back to Employees page
+            return redirect("/Employees")
 
     # Separate out the request methods, in this case this is for a GET
     if request.method == "GET":
@@ -74,17 +72,68 @@ def employees():
         return render_template("employees.j2", employees_table=data, site_options=site_options, exemption_options=exemption_options)
 
 
-@app.route('/worksites')
+@app.route('/worksites', methods=["POST", "GET"])
 def worksites():
-    select_query = "SELECT * FROM Worksites;"
-    cursor = mysql.connection.cursor()
-    cursor.execute(select_query)
-    data = cursor.fetchall()
-    return render_template("worksites.j2", worksites_table=data)
+    # Separate out the request methods, in this case this is for a POST
+    # Insert a worksite into the Worksites entity
+    if request.method == "POST":
+        
+        # If user wants to add a Worksite
+        if request.form.get("Add Worksite"):
+            site_id = request.form["site_id"]
+            location = request.form["location"]
+            department = request.form["department"]
+            manager_first = request.form["manager_first"]
+            manager_last = request.form["manager_last"]
+
+            # No null inputs allowed
+            query = "INSERT INTO Worksites (site_id, location, department, manager_first, manager_last) VALUES (%s, %s, %s, %s, %s)"
+            cur = mysql.connection.cursor()
+            cur.execute(query, (site_id, location, department, manager_first, manager_last))
+            mysql.connection.commit()
+
+        # Redirect back to Worksites page
+        return redirect("/Worksites")
+
+    # Separate out the request methods, in this case this is for a GET
+    if request.method == "GET":
+        select_query = "SELECT * FROM Worksites;"
+        cursor = mysql.connection.cursor()
+        cursor.execute(select_query)
+        data = cursor.fetchall()
+        return render_template("worksites.j2", worksites_table=data)
 
 
-@app.route('/exemptions')
+@app.route('/exemptions', methods=["POST", "GET"])
 def exemptions():
+    # Separate out the request methods, in this case this is for a POST
+    # Insert an exemption into the Exemptions entity
+    if request.method == "POST":
+        
+        # If user wants to add an Exemption
+        if request.form.get("Add Exemption"):
+            exemption_id = request.form["exemption_id"]
+            exemption_status = request.form["exemption_status"]
+            exemption_type = request.form["exemption_type"]
+
+            # Account for null exemption_type
+            if exemption_type == "0":
+                query = "INSERT INTO Exemptions (exemption_id, exemption_status) VALUES (%s, %s)"
+                cur = mysql.connection.cursor()
+                cur.execute(query, (exemption_id, exemption_status))
+                mysql.connection.commit()
+
+            # No null inputs
+            else:
+                query = "INSERT INTO Employees (exemption_id, exemption_status, exemption_id) VALUES (%s, %s, %s)"
+                cur = mysql.connection.cursor()
+                cur.execute(query, (exemption_id, exemption_status, exemption_id))
+                mysql.connection.commit()
+
+            # redirect back to Exemptions page
+            return redirect("/Exemptions")
+
+    # Separate out the request methods, in this case this is for a GET
     select_query = "SELECT * FROM Exemptions;"
     cursor = mysql.connection.cursor()
     cursor.execute(select_query)
@@ -92,8 +141,27 @@ def exemptions():
     return render_template("exemptions.j2", exemptions_table=data)
 
 
-@app.route('/vaccines')
+@app.route('/vaccines', methods=["POST", "GET"])
 def vaccines():
+    # Separate out the request methods, in this case this is for a POST
+    # Insert a vaccine into the Vaccines entity
+    if request.method == "POST":
+        
+        # If user wants to add a Vaccine
+        if request.form.get("Add Vaccine"):
+            vaccine_id = request.form["site_id"]
+            vaccine_manufacturer = request.form["location"]
+
+            # No null inputs allowed
+            query = "INSERT INTO Vaccines (vaccine_id, vaccine_manufacturer) VALUES (%s, %s)"
+            cur = mysql.connection.cursor()
+            cur.execute(query, (vaccine_id, vaccine_manufacturer))
+            mysql.connection.commit()
+
+        # Redirect back to Vaccines page
+        return redirect("/Vaccines")
+
+    # Separate out the request methods, in this case this is for a GET
     select_query = "SELECT * FROM Vaccines;"
     cursor = mysql.connection.cursor()
     cursor.execute(select_query)
@@ -101,8 +169,29 @@ def vaccines():
     return render_template("vaccines.j2", vaccines_table=data)
 
 
-@app.route('/employees_vaccines')
+@app.route('/employees_vaccines', methods=["POST", "GET"])
 def employees_vaccines():
+    # Separate out the request methods, in this case this is for a POST
+    # Insert record of vaccines given to employees in the Employees_Vaccines entity
+    if request.method == "POST":
+        
+        # If user wants to add a vaccine record for an employee
+        if request.form.get("Add Vaccine Record"):
+            employee_id = request.form["employee_id"]
+            vaccine_id = request.form["vaccine_id"]
+            date_administered = request.form["date_administered"]
+            dose = request.form["dose"]
+
+            # No null inputs allowed
+            query = "INSERT INTO Employees_Vaccines (employee_id, vaccine_id, date_administered, dose) VALUES (%s, %s, %s, %s)"
+            cur = mysql.connection.cursor()
+            cur.execute(query, (employee_id, vaccine_id, date_administered, dose))
+            mysql.connection.commit()
+
+        # Redirect back to Employees_Vaccines page
+        return redirect("/Employees_Vaccines")
+
+    # Separate out the request methods, in this case this is for a GET
     select_query = "SELECT * FROM Employees_Vaccines;"
     cursor = mysql.connection.cursor()
     cursor.execute(select_query)
