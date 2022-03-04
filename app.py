@@ -103,7 +103,7 @@ def exemptions():
             exemption_type = request.form["exemption_type"]
 
             # Account for null exemption_type
-            if exemption_type is None:
+            if not exemption_type:
                 query = "INSERT INTO Exemptions (exemption_id, exemption_status) VALUES (%s, %s)"
                 cur = mysql.connection.cursor()
                 cur.execute(query, (exemption_id, exemption_status))
