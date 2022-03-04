@@ -85,7 +85,13 @@ def employees_vaccines():
     cursor = mysql.connection.cursor()
     cursor.execute(select_query)
     data = cursor.fetchall()
-    return render_template("employees_vaccines.j2", table_data=data)
+    employee_query = "SELECT employee_id FROM Employees;"
+    cursor.execute(employee_query)
+    employee_options = cursor.fetchall()
+    vaccine_query = "SELECT vaccine_id FROM Vaccines;"
+    cursor.execute(vaccine_query)
+    vaccine_options = cursor.fetchall()
+    return render_template("employees_vaccines.j2", table_data=data, employee_options=employee_options, vaccine_options=vaccine_options)
 
 
 # Listener
