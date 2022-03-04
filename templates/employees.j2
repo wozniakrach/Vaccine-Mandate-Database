@@ -58,7 +58,7 @@
         <td>False</td>
         <td>{{employee['termed'].decode()}}</td>
         {% endif %}
-        {% if (employee['termed'].decode() == '0x01') %}
+        {% if (employee['termed'].decode() != '0x01') %}
         <td>True</td>
         <td>{{employee['termed'].decode()}}</td>
         {% endif %}
