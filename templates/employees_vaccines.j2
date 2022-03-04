@@ -6,11 +6,11 @@
 
 {% block body %}
 <h1 class="page-title">Employees-Vaccines</h1>
-<form>
+<form action="{{url_for('employees_vaccines')}}" method="POST">
     <fieldset class="add-entity">
         <legend>Add Employee-Vaccine</legend>
         <label>Employee ID: </label>
-        <select name="empid">
+        <select name="emloyee_id">
             {% for id in employee_options %}
             <option value="{{id['employee_id']}}">{{id['employee_id']}}</option>
             {% endfor %}
@@ -36,7 +36,7 @@
         <input type="radio" name="dose" value="0">
         <label for="0">Unknown</label>
         <br>
-        <input type="submit" id="emp_vacc-submit">
+        <input type="submit" name="emp_vacc-submit">
     </fieldset>
 </form>
 <form id="search-form">
