@@ -25,13 +25,15 @@
         <label for="false">False</label><br>
         <label>Site ID: </label>
         <select name="site">
-            <option value="1">1</option>
+            {% for id in site_options %}
+            <option value="{{id}}">{{id}}</option>
+            {% endfor %}
         </select><br>
         <label>Exemption ID: </label>
         <select name="exemption">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
+            {% for id in exemption_options %}
+            <option value="{{id}}">{{id}}</option>
+            {% endfor %}
             <option value="N/A">N/A</option>
         </select><br>
         <input type="submit" id="employee-submit">
