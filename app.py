@@ -17,21 +17,13 @@ mysql = MySQL(app)
 # Routes
 @app.route('/')
 def root():
-    # query = "SELECT * FROM diagnostic;"
-    # cur = mysql.connection.cursor()
-    # cur.execute(query)
-    # results = cur.fetchall()
-    # return results[0]
     return render_template("home.j2")
 
 
 @app.route('/employees', methods=["POST", "GET"])
 def employees():
-    # Separate out the request methods, in this case this is for a POST
     # Insert a person into the Employees table
     if request.method == "POST":
-        
-        # If user wants to add an Employee
         if request.form.get("employee-submit"):
             first_name = request.form["fname"]
             last_name = request.form["lname"]
