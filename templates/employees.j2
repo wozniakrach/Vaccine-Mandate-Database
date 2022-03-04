@@ -54,11 +54,11 @@
         <td>{{employee['first_name']}}</td>
         <td>{{employee['last_name']}}</td>
         <td>{{employee['birthdate']}}</td>
-        {% if (employee['termed'].decode() == '0x00') %}
+        {% if (employee['termed'].decode('utf-8') == '0x00') %}
         <td>False</td>
         <td>{{employee['termed'].decode()}}</td>
         {% endif %}
-        {% if (employee['termed'].decode() != '0x01') %}
+        {% if (employee['termed'].decode('utf-8') != '0x01') %}
         <td>True</td>
         <td>{{employee['termed'].decode()}}</td>
         {% endif %}
