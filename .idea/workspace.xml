@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2180b1b6-79b8-4ac1-a176-bd7ca31788f6" name="Default Changelist" comment="typo?">
-      <change beforePath="$PROJECT_DIR$/templates/employees.j2" beforeDir="false" afterPath="$PROJECT_DIR$/templates/employees.j2" afterDir="false" />
+    <list default="true" id="2180b1b6-79b8-4ac1-a176-bd7ca31788f6" name="Default Changelist" comment="fix if else for exemptions">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -322,7 +322,35 @@
       <option name="project" value="LOCAL" />
       <updated>1646359396692</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="test decode utf 8">
+      <created>1646359827598</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1646359827599</updated>
+    </task>
+    <task id="LOCAL-00037" summary="typo">
+      <created>1646359874194</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1646359874194</updated>
+    </task>
+    <task id="LOCAL-00038" summary="fix if else">
+      <created>1646360004994</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1646360004994</updated>
+    </task>
+    <task id="LOCAL-00039" summary="fix if else for exemptions">
+      <created>1646360125514</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1646360125514</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -341,9 +369,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Updates for Step 3 Final Draft - peer review fixes &amp; added more data" />
-    <MESSAGE value="attempt 1 display employees table data from db" />
-    <MESSAGE value="test updates" />
     <MESSAGE value="get employee data from db" />
     <MESSAGE value="test returned data" />
     <MESSAGE value="add if else for termed bit display" />
@@ -361,11 +386,14 @@
     <MESSAGE value="test decode on b" />
     <MESSAGE value="test decode" />
     <MESSAGE value="add vaccines select" />
-    <MESSAGE value="typo" />
     <MESSAGE value="test decoded bit value" />
     <MESSAGE value="add exemptions select" />
     <MESSAGE value="add employees_vaccines select" />
     <MESSAGE value="typo?" />
-    <option name="LAST_COMMIT_MESSAGE" value="typo?" />
+    <MESSAGE value="test decode utf 8" />
+    <MESSAGE value="typo" />
+    <MESSAGE value="fix if else" />
+    <MESSAGE value="fix if else for exemptions" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix if else for exemptions" />
   </component>
 </project>
