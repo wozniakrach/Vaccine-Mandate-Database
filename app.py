@@ -27,29 +27,50 @@ def root():
 
 @app.route('/employees', methods=["POST", "GET"])
 def employees():
-    #  if request.method == "POST":
-    #     if request.form.get("employee-submit"):
-    #        fname = request.form["fname"]
-    #       lname = request.form["lname"]
-    #      birthdate = request.form["birthdate"]
-    #     termed = request.form["termed"]
-    #    site = request.form["site"]
-    #   exemption = request.form["exemption"]
-    #  if exemption == "N/A":
-    #     exemption = None
-    # insert_query = "INSERT INTO Employees (first_name, last_name, birthdate, termed, site_id, exemption_id) VALUES (%s, %s, %s, %s, %s, %s)" % (fname, lname, birthdate, termed, site, exemption)
-    #  print(insert_query)
-    select_query = "SELECT * FROM Employees;"
-    cursor = mysql.connection.cursor()
-    cursor.execute(select_query)
-    data = cursor.fetchall()
-    site_query = "SELECT site_id FROM Worksites;"
-    cursor.execute(site_query)
-    site_options = cursor.fetchall()
-    exemption_query = "SELECT exemption_id FROM Exemptions;"
-    cursor.execute(exemption_query)
-    exemption_options = cursor.fetchall()
-    return render_template("employees.j2", employees_table=data, site_options=site_options, exemption_options=exemption_options)
+    # Insert a person into the Employees entity
+    if request.method == "POST":
+        # If user presses the Add Employee button
+        if request.form.get("Add Employee"):
+            first_name = request.form["first_name"]
+            last_name = request.form["last_name"]
+            birthdate = request.form["birthdate"]
+            termed = request.form["termed"]
+            site_id = request.form["site_id"]
+            exemption_id = request.form["exemption_id"]
+
+            # Account for null exemption_id
+            if exemption_id == "0":
+                query = "INSERT INTO Employees (first_name, last_name, birthdate, termed, site_id) " \
+                        "VALUES (%s, %s, %s, %s, %s)"
+                cur = mysql.connection.cursor()
+                cur.execute(query, (first_name, last_name, birthdate, termed, site_id))
+                mysql.connection.commit()
+
+            # No null inputs
+            else:
+                query = "INSERT INTO Employees (first_name, last_name, birthdate, termed, site_id, exemption_id) " \
+                        "VALUES (%s, %s, %s, %s, %s, %s)"
+                cur = mysql.connection.cursor()
+                cur.execute(query, (first_name, last_name, birthdate, termed, site_id, exemption_id))
+                mysql.connection.commit()
+
+            # redirect back to people page
+            return redirect("/Employees")
+
+    # Separate out the request methods, in this case this is for a GET
+    # Grab Employees data so we can send it to our template to display
+    if request.method == "GET":
+        select_query = "SELECT * FROM Employees;"
+        cursor = mysql.connection.cursor()
+        cursor.execute(select_query)
+        data = cursor.fetchall()
+        site_query = "SELECT site_id FROM Worksites;"
+        cursor.execute(site_query)
+        site_options = cursor.fetchall()
+        exemption_query = "SELECT exemption_id FROM Exemptions;"
+        cursor.execute(exemption_query)
+        exemption_options = cursor.fetchall()
+        return render_template("employees.j2", employees_table=data, site_options=site_options, exemption_options=exemption_options)
 
 
 @app.route('/worksites')
