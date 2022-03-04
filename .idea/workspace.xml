@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2180b1b6-79b8-4ac1-a176-bd7ca31788f6" name="Default Changelist" comment="update add exemption form">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="2180b1b6-79b8-4ac1-a176-bd7ca31788f6" name="Default Changelist" comment="update add vaccines and add employees_vaccines forms">
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/employees_vaccines.j2" beforeDir="false" afterPath="$PROJECT_DIR$/templates/employees_vaccines.j2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/vaccines.j2" beforeDir="false" afterPath="$PROJECT_DIR$/templates/vaccines.j2" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,13 +76,6 @@
       <workItem from="1644558963994" duration="902000" />
       <workItem from="1644822104742" duration="65000" />
       <workItem from="1645146175185" duration="2987000" />
-    </task>
-    <task id="LOCAL-00009" summary="test returned data">
-      <created>1646338387515</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1646338387515</updated>
     </task>
     <task id="LOCAL-00010" summary="mismatched bracket">
       <created>1646338453527</created>
@@ -423,7 +413,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646370828669</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="update add vaccines and add employees_vaccines forms">
+      <created>1646371407123</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1646371407129</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -442,7 +439,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="mismatched bracket" />
     <MESSAGE value="test decode on b" />
     <MESSAGE value="test decode" />
     <MESSAGE value="add vaccines select" />
@@ -467,6 +463,7 @@
     <MESSAGE value="redirect url typo" />
     <MESSAGE value="update add worksites form" />
     <MESSAGE value="update add exemption form" />
-    <option name="LAST_COMMIT_MESSAGE" value="update add exemption form" />
+    <MESSAGE value="update add vaccines and add employees_vaccines forms" />
+    <option name="LAST_COMMIT_MESSAGE" value="update add vaccines and add employees_vaccines forms" />
   </component>
 </project>
