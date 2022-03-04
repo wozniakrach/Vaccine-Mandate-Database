@@ -33,12 +33,12 @@ def employees():
         
         # If user wants to add an Employee
         if request.form.get("employee-submit"):
-            first_name = request.form["first_name"]
-            last_name = request.form["last_name"]
+            first_name = request.form["fname"]
+            last_name = request.form["lname"]
             birthdate = request.form["birthdate"]
             termed = request.form["termed"]
             site_id = request.form["site"]
-            exemption_id = request.form["exemption_id"]
+            exemption_id = request.form["exemption"]
 
             # Account for null exemption_id
             if exemption_id == "N/A":
