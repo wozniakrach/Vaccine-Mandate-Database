@@ -57,7 +57,11 @@ def worksites():
 
 @app.route('/exemptions')
 def exemptions():
-    return render_template("exemptions.j2")
+    select_query = "SELECT * FROM Exemptions;"
+    cursor = mysql.connection.cursor()
+    cursor.execute(select_query)
+    data = cursor.fetchall()
+    return render_template("exemptions.j2", exemptions_table=data)
 
 
 @app.route('/vaccines')

@@ -29,23 +29,13 @@
         <th>Type</th>
         <th></th>
     </thead>
+    {% for exemption in exemptions_table % }
     <tr>
-        <td>1</td>
-        <td>1</td>
-        <td>Medical</td>
+        <td>{{exemption['exemption_id']}}</td>
+        <td>{{exemption['exemption_status']}}</td>
+        <td>{{exemption['exemption_type']}}</td>
         <td><button>Delete</button></td>
     </tr>
-    <tr>
-        <td>2</td>
-        <td>1</td>
-        <td>Religious</td>
-        <td><button>Delete</button></td>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>0</td>
-        <td>None</td>
-        <td><button>Delete</button></td>
-    </tr>
+    {% endfor %}
 </table>
 {% endblock %}
