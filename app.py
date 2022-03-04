@@ -47,7 +47,7 @@ def employees():
                 mysql.connection.commit()
                 
             # redirect back to Employees page
-            return redirect("/Employees")
+            return redirect("/employees")
 
     # Separate out the request methods, in this case this is for a GET
     if request.method == "GET":
