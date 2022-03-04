@@ -129,7 +129,7 @@ def exemptions():
 
 @app.route('/vaccines', methods=["POST", "GET"])
 def vaccines():
-# Insert a vaccine into the Vaccines table
+    # Insert a vaccine into the Vaccines table
     if request.method == "POST":
         if request.form.get("vaccine-submit"):
             vaccine_id = request.form["vaccine_id"]
