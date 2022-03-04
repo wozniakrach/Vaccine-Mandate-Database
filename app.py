@@ -43,7 +43,7 @@ def employees():
     cursor = mysql.connection.cursor()
     cursor.execute(select_query)
     data = cursor.fetchall()
-    site_query = "SELECT site_id FROM Sites;"
+    site_query = "SELECT site_id FROM Worksites;"
     cursor.execute(site_query)
     site_options = cursor.fetchall()
     exemption_query = "SELECT exemption_id FROM Exemptions;"
