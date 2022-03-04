@@ -22,7 +22,7 @@ def root():
     # cur.execute(query)
     # results = cur.fetchall()
     # return results[0]
-    return render_template("home.html")
+    return render_template("home.j2")
 
 
 @app.route('/employees', methods=["POST", "GET"])
@@ -57,17 +57,21 @@ def worksites():
 
 @app.route('/exemptions')
 def exemptions():
-    return render_template("exemptions.html")
+    return render_template("exemptions.j2")
 
 
 @app.route('/vaccines')
 def vaccines():
-    return render_template("vaccines.html")
+    select_query = "SELECT * FROM Vaccines;"
+    cursor = mysql.connection.cursor()
+    cursor.execute(select_query)
+    data = cursor.fetchall()
+    return render_template("vaccines.j2", vaccines_table=data)
 
 
 @app.route('/employees_vaccines')
 def employees_vaccines():
-    return render_template("employees_vaccines.html")
+    return render_template("employees_vaccines.j2")
 
 
 # Listener

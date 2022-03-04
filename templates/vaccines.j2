@@ -22,37 +22,11 @@
         <th>ID</th>
         <th>Manufacturer</th>
     </thead>
+    {% for vaccine in vaccine_table %}
     <tr>
-        <td>1</td>
-        <td>Pfizer/BioNTech</td>
+        <td>{{vaccine['vaccine_id']}}</td>
+        <td>{{vaccine['vaccine_manufacturer']}}</td>
     </tr>
-    <tr>
-        <td>2</td>
-        <td>Moderna</td>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>Janssen/Johnson & Johnson</td>
-    </tr>
-    <tr>
-        <td>4</td>
-        <td>Oxford/AstraZeneca</td>
-    </tr>
-    <tr>
-        <td>5</td>
-        <td>Novavax</td>
-    </tr>
-    <tr>
-        <td>6</td>
-        <td>Sinopharm</td>
-    </tr>
-    <tr>
-        <td>7</td>
-        <td>Sinovac</td>
-    </tr>
-    <tr>
-        <td>8</td>
-        <td>Bharat Biotech</td>
-    </tr>
+    {% endfor %}
 </table>
 {% endblock %}
