@@ -27,19 +27,19 @@ def root():
 
 @app.route('/employees', methods=["POST", "GET"])
 def employees():
-    # Insert a person into the Employees entity
+    # Insert a person into the Employees table
     if request.method == "POST":
         # If user presses the Add Employee button
-        if request.form.get("Add Employee"):
-            first_name = request.form["first_name"]
-            last_name = request.form["last_name"]
+        if request.form.get("employee-submit"):
+            first_name = request.form["fname"]
+            last_name = request.form["lname"]
             birthdate = request.form["birthdate"]
             termed = request.form["termed"]
-            site_id = request.form["site_id"]
-            exemption_id = request.form["exemption_id"]
+            site_id = request.form["site"]
+            exemption_id = request.form["exemption"]
 
             # Account for null exemption_id
-            if exemption_id == "0":
+            if exemption_id == "N/A":
                 query = "INSERT INTO Employees (first_name, last_name, birthdate, termed, site_id) " \
                         "VALUES (%s, %s, %s, %s, %s)"
                 cur = mysql.connection.cursor()
