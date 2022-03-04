@@ -27,16 +27,18 @@ def root():
 
 @app.route('/employees', methods=["POST", "GET"])
 def employees():
+    # Separate out the request methods, in this case this is for a POST
     # Insert a person into the Employees table
     if request.method == "POST":
-        # If user presses the Add Employee button
+        
+        # If user wants to add an Employee
         if request.form.get("employee-submit"):
-            first_name = request.form["fname"]
-            last_name = request.form["lname"]
+            first_name = request.form["first_name"]
+            last_name = request.form["last_name"]
             birthdate = request.form["birthdate"]
             termed = request.form["termed"]
             site_id = request.form["site"]
-            exemption_id = request.form["exemption"]
+            exemption_id = request.form["exemption_id"]
 
             # Account for null exemption_id
             if exemption_id == "N/A":
@@ -46,7 +48,7 @@ def employees():
                 cur.execute(query, (first_name, last_name, birthdate, termed, site_id))
                 mysql.connection.commit()
 
-            # No null inputs
+            # If there are no null inputs
             else:
                 query = "INSERT INTO Employees (first_name, last_name, birthdate, termed, site_id, exemption_id) " \
                         "VALUES (%s, %s, %s, %s, %s, %s)"
@@ -54,11 +56,10 @@ def employees():
                 cur.execute(query, (first_name, last_name, birthdate, termed, site_id, exemption_id))
                 mysql.connection.commit()
 
-            # redirect back to people page
-            return redirect("/Employees")
+                # redirect back to Employees page
+                return redirect("/Employees")
 
     # Separate out the request methods, in this case this is for a GET
-    # Grab Employees data so we can send it to our template to display
     if request.method == "GET":
         select_query = "SELECT * FROM Employees;"
         cursor = mysql.connection.cursor()
