@@ -41,13 +41,13 @@
 </form>
 <form id="search-form">
     <p>Search by Employee ID: </p>
-    <select name="id">
+    <select name="employee_id">
         {% for id in employee_options %}
         <option value="{{id['employee_id']}}">{{id['employee_id']}}</option>
         {% endfor %}
     </select>
     <br>
-    <input type="submit" value="Search" id="search-submit">
+    <input type="submit" name="search-submit">
 </form>
 <table class="entity-table">
     <thead>

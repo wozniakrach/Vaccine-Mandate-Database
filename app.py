@@ -164,8 +164,23 @@ def employees_vaccines():
             cur.execute(query, (employee_id, vaccine_id, date_administered, dose))
             mysql.connection.commit()
 
-        # Redirect back to Employees_Vaccines page
-        return redirect("/employees_vaccines")
+            # Redirect back to Employees_Vaccines page
+            return redirect("/employees_vaccines")
+
+        # Display filtered results if search was made
+        elif request.form.get("search-submit"):
+            employee_id = request.form["employee_id"]
+            search_query = "SELECT * FROM Employees_Vaccines WHERE employee_id = %s;"
+            cursor = mysql.connection.cursor()
+            cursor.execute(search_query, employee_id)
+            results = cursor.fetchall()
+            employee_query = "SELECT employee_id FROM Employees;"
+            cursor.execute(employee_query)
+            employee_options = cursor.fetchall()
+            vaccine_query = "SELECT vaccine_id FROM Vaccines;"
+            cursor.execute(vaccine_query)
+            vaccine_options = cursor.fetchall()
+            return render_template("employees_vaccines.j2", table_data=results, employee_options=employee_options, vaccine_options=vaccine_options)
 
     # Display Employees_Vaccines table
     select_query = "SELECT * FROM Employees_Vaccines;"
