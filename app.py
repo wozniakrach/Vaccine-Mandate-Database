@@ -69,16 +69,15 @@ def worksites():
      # Insert a worksite into the Worksites table
     if request.method == "POST":
         if request.form.get("worksite-submit"):
-            site_id = request.form["site_id"]
             location = request.form["location"]
             department = request.form["department"]
             manager_first = request.form["manager_first"]
             manager_last = request.form["manager_last"]
 
             # No null inputs allowed
-            query = "INSERT INTO Worksites (site_id, location, department, manager_first, manager_last) VALUES (%s, %s, %s, %s, %s)"
+            query = "INSERT INTO Worksites (location, department, manager_first, manager_last) VALUES (%s, %s, %s, %s)"
             cur = mysql.connection.cursor()
-            cur.execute(query, (site_id, location, department, manager_first, manager_last))
+            cur.execute(query, (location, department, manager_first, manager_last))
             mysql.connection.commit()
 
         # Redirect back to Worksites page
@@ -98,22 +97,21 @@ def exemptions():
     # Insert an exemption into the Exemptions table
     if request.method == "POST":
         if request.form.get("exemption-submit"):
-            exemption_id = request.form["exemption_id"]
             exemption_status = request.form["exemption_status"]
             exemption_type = request.form["exemption_type"]
 
             # Account for null exemption_type
             if not exemption_type:
-                query = "INSERT INTO Exemptions (exemption_id, exemption_status) VALUES (%s, %s)"
+                query = "INSERT INTO Exemptions (exemption_status) VALUES (%s)"
                 cur = mysql.connection.cursor()
-                cur.execute(query, (exemption_id, exemption_status))
+                cur.execute(query, (exemption_status))
                 mysql.connection.commit()
 
             # No null inputs
             else:
-                query = "INSERT INTO Exemptions (exemption_id, exemption_status, exemption_type) VALUES (%s, %s, %s)"
+                query = "INSERT INTO Exemptions (exemption_status, exemption_type) VALUES (%s, %s)"
                 cur = mysql.connection.cursor()
-                cur.execute(query, (exemption_id, exemption_status, exemption_type))
+                cur.execute(query, (exemption_status, exemption_type))
                 mysql.connection.commit()
 
             # redirect back to Exemptions page
@@ -132,13 +130,12 @@ def vaccines():
     # Insert a vaccine into the Vaccines table
     if request.method == "POST":
         if request.form.get("vaccine-submit"):
-            vaccine_id = request.form["vaccine_id"]
             vaccine_manufacturer = request.form["vaccine_manufacturer"]
 
             # No null inputs allowed
-            query = "INSERT INTO Vaccines (vaccine_id, vaccine_manufacturer) VALUES (%s, %s)"
+            query = "INSERT INTO Vaccines (vaccine_manufacturer) VALUES (%s)"
             cur = mysql.connection.cursor()
-            cur.execute(query, (vaccine_id, vaccine_manufacturer))
+            cur.execute(query, (vaccine_manufacturer))
             mysql.connection.commit()
 
         # Redirect back to Vaccines page
