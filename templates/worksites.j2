@@ -6,25 +6,25 @@
 
 {% block body %}
 <h1 class="page-title">Worksites</h1>
-<form>
+<form action="{{url_for('worksites')}}" method="POST">
     <fieldset class="add-entity">
         <legend>Add Worksite</legend>
-        <label for="siteid">Site Id: </label>
-        <input type="text" id="siteid"/>
+        <label for="site_id">Site Id: </label>
+        <input type="text" name="site_id"/>
         <br>
         <label for="location">Location: </label>
-        <input type="text" id="location"/>
+        <input type="text" name="location"/>
         <br>
         <label for="department">Department: </label>
-        <input type="text" id="department"/>
+        <input type="text" name="department"/>
         <br>
-        <label for="managerf">Manager First Name: </label>
-        <input type="text" id="managerf"/>
+        <label for="manager_first">Manager First Name: </label>
+        <input type="text" name="manager_first"/>
         <br>
-        <label for="managerl">Manager Last Name: </label>
-        <input type="text" id="managerl"/>
+        <label for="manager_last">Manager Last Name: </label>
+        <input type="text" name="manager_last"/>
         <br>
-        <input type="submit" id="worksite-submit">
+        <input type="submit" name="worksite-submit">
     </fieldset>
 </form>
 <table class="entity-table">

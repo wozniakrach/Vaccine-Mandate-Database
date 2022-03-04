@@ -25,12 +25,12 @@ def employees():
     # Insert a person into the Employees table
     if request.method == "POST":
         if request.form.get("employee-submit"):
-            first_name = request.form["fname"]
-            last_name = request.form["lname"]
+            first_name = request.form["first_name"]
+            last_name = request.form["last_name"]
             birthdate = request.form["birthdate"]
             termed = request.form["termed"]
-            site_id = request.form["site"]
-            exemption_id = request.form["exemption"]
+            site_id = request.form["site_id"]
+            exemption_id = request.form["exemption_id"]
 
             # Account for null exemption_id
             if exemption_id == "N/A":
@@ -66,12 +66,9 @@ def employees():
 
 @app.route('/worksites', methods=["POST", "GET"])
 def worksites():
-    # Separate out the request methods, in this case this is for a POST
-    # Insert a worksite into the Worksites entity
+     # Insert a worksite into the Worksites table
     if request.method == "POST":
-        
-        # If user wants to add a Worksite
-        if request.form.get("Add Worksite"):
+        if request.form.get("worksite-submit"):
             site_id = request.form["site_id"]
             location = request.form["location"]
             department = request.form["department"]
@@ -85,7 +82,7 @@ def worksites():
             mysql.connection.commit()
 
         # Redirect back to Worksites page
-        return redirect("/Worksites")
+        return redirect("/worksites")
 
     # Separate out the request methods, in this case this is for a GET
     if request.method == "GET":
