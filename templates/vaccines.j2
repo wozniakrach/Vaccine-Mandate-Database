@@ -6,15 +6,15 @@
 
 {% block body %}
 <h1 class="page-title">Vaccines</h1>
-<form>
+<form action="{{url_for('vaccines')}}" method="POST">
     <fieldset class="add-entity">
         <legend>Add Vaccine</legend>
-        <label for="vaccineid">Vaccine ID: </label>
-        <input type="text" id="vaccineid"/>
+        <label for="vaccine_id">Vaccine ID: </label>
+        <input type="text" name="vaccine_id"/>
         <br>
-        <label for="manufacturer">Vaccine Manufacturer: </label>
-        <input type="text" id="manufacturer"/><br>
-        <input type="submit" id="vaccine-submit">
+        <label for="vaccine_manufacturer">Vaccine Manufacturer: </label>
+        <input type="text" name="vaccine_manufacturer"/><br>
+        <input type="submit" name="vaccine-submit">
     </fieldset>
 </form>
 <table class="entity-table">

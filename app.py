@@ -129,14 +129,11 @@ def exemptions():
 
 @app.route('/vaccines', methods=["POST", "GET"])
 def vaccines():
-    # Separate out the request methods, in this case this is for a POST
-    # Insert a vaccine into the Vaccines entity
+# Insert a vaccine into the Vaccines table
     if request.method == "POST":
-        
-        # If user wants to add a Vaccine
-        if request.form.get("Add Vaccine"):
-            vaccine_id = request.form["site_id"]
-            vaccine_manufacturer = request.form["location"]
+        if request.form.get("vaccine-submit"):
+            vaccine_id = request.form["vaccine_id"]
+            vaccine_manufacturer = request.form["vaccine_manufacturer"]
 
             # No null inputs allowed
             query = "INSERT INTO Vaccines (vaccine_id, vaccine_manufacturer) VALUES (%s, %s)"
@@ -145,9 +142,8 @@ def vaccines():
             mysql.connection.commit()
 
         # Redirect back to Vaccines page
-        return redirect("/Vaccines")
+        return redirect("/vaccines")
 
-    # Separate out the request methods, in this case this is for a GET
     select_query = "SELECT * FROM Vaccines;"
     cursor = mysql.connection.cursor()
     cursor.execute(select_query)
@@ -157,12 +153,9 @@ def vaccines():
 
 @app.route('/employees_vaccines', methods=["POST", "GET"])
 def employees_vaccines():
-    # Separate out the request methods, in this case this is for a POST
-    # Insert record of vaccines given to employees in the Employees_Vaccines entity
+    # Insert record of vaccines given to employees in the Employees_Vaccines table
     if request.method == "POST":
-        
-        # If user wants to add a vaccine record for an employee
-        if request.form.get("Add Vaccine Record"):
+        if request.form.get("emp_vacc-submit"):
             employee_id = request.form["employee_id"]
             vaccine_id = request.form["vaccine_id"]
             date_administered = request.form["date_administered"]
@@ -175,9 +168,9 @@ def employees_vaccines():
             mysql.connection.commit()
 
         # Redirect back to Employees_Vaccines page
-        return redirect("/Employees_Vaccines")
+        return redirect("/employees_vaccines")
 
-    # Separate out the request methods, in this case this is for a GET
+    # Display Employees_Vaccines table
     select_query = "SELECT * FROM Employees_Vaccines;"
     cursor = mysql.connection.cursor()
     cursor.execute(select_query)

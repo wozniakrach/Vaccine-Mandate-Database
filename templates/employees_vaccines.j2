@@ -17,23 +17,23 @@
         </select>
         <br>
         <label>Vaccine ID: </label>
-        <select name="vaccid">
+        <select name="vaccine_id">
             {% for id in vaccine_options %}
             <option value="{{id['vaccine_id']}}">{{id['vaccine_id']}}</option>
             {% endfor %}
         </select>
         <br>
-        <label for="date">Date Administered: </label>
-        <input type="date" id="date"/>
+        <label for="date_administered">Date Administered: </label>
+        <input type="date" name="date_administered"/>
         <br>
         <label>Dose: </label>
-        <input type="radio" id="1" name="dose" value="1">
+        <input type="radio" name="dose" value="1">
         <label for="1">1st</label>
-        <input type="radio" id="2" name="dose" value="2">
+        <input type="radio" name="dose" value="2">
         <label for="2">2</label>
-        <input type="radio" id="3" name="dose" value="3">
+        <input type="radio" name="dose" value="3">
         <label for="3">Booster</label>
-        <input type="radio" id="0" name="dose" value="0">
+        <input type="radio" name="dose" value="0">
         <label for="0">Unknown</label>
         <br>
         <input type="submit" id="emp_vacc-submit">
