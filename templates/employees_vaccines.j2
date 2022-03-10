@@ -58,6 +58,7 @@
         <th>Dose</th>
         <th></th>
     </thead>
+    {% if table_data|length > 0 %}
     {% for entry in table_data %}
     <tr>
         <td>{{entry['employee_vaccine_id']}}</td>
@@ -72,5 +73,10 @@
         <td><button>Delete</button></td>
     </tr>
     {% endfor %}
+    {% else %}
+    <tr>
+        <td>No Entries Were Found For Designated Employee</td>
+    </tr>
+    {% endif %}
 </table>
 {% endblock %}
