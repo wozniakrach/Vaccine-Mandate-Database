@@ -64,7 +64,11 @@
         <td>{{entry['employee_id']}}</td>
         <td>{{entry['vaccine_id']}}</td>
         <td>{{entry['date_administered']}}</td>
+        {% if (entry['dose'] == 0) %}
+        <td>Unknown</td>
+        {% else %}
         <td>{{entry['dose']}}</td>
+        {% endif %}
         <td><button>Delete</button></td>
     </tr>
     {% endfor %}
