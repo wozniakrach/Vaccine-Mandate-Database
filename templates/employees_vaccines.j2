@@ -24,10 +24,10 @@
         </select>
         <br>
         <label for="date_administered">Date Administered: </label>
-        <input type="date" name="date_administered"/>
+        <input type="date" name="date_administered" required/>
         <br>
         <label>Dose: </label>
-        <input type="radio" name="dose" value="1">
+        <input type="radio" name="dose" value="1" required>
         <label for="1">1st</label>
         <input type="radio" name="dose" value="2">
         <label for="2">2</label>
@@ -41,7 +41,7 @@
 </form>
 <form id="search-form">
     <p>Search by Employee ID: </p>
-    <select name="employee_id">
+    <select name="employee_id" required>
         {% for id in employee_options %}
         <option value="{{id['employee_id']}}">{{id['employee_id']}}</option>
         {% endfor %}

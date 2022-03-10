@@ -10,21 +10,21 @@
     <fieldset class="add-entity">
         <legend>Add Employee</legend>
         <label for="first_name">First Name: </label>
-        <input type="text" name="first_name"/>
+        <input type="text" name="first_name" required/>
         <br>
         <label for="last_name">Last Name: </label>
-        <input type="text" name="last_name"/>
+        <input type="text" name="last_name" required/>
         <br>
         <label for="birthdate">Birthdate: </label>
-        <input type="date" name="birthdate"/>
+        <input type="date" name="birthdate" required/>
         <br>
         <label>Termed: </label>
-        <input type="radio" name="termed" value="1">
+        <input type="radio" name="termed" value="1" required>
         <label for="true">True</label>
         <input type="radio" name="termed" value="0">
         <label for="false">False</label><br>
         <label>Site ID: </label>
-        <select name="site_id">
+        <select name="site_id" required>
             {% for id in site_options %}
             <option value="{{id['site_id']}}">{{id['site_id']}}</option>
             {% endfor %}

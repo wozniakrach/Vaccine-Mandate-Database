@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2180b1b6-79b8-4ac1-a176-bd7ca31788f6" name="Default Changelist" comment="implement filter" />
+    <list default="true" id="2180b1b6-79b8-4ac1-a176-bd7ca31788f6" name="Default Changelist" comment="implement filter">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/employees.j2" beforeDir="false" afterPath="$PROJECT_DIR$/templates/employees.j2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/employees_vaccines.j2" beforeDir="false" afterPath="$PROJECT_DIR$/templates/employees_vaccines.j2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/exemptions.j2" beforeDir="false" afterPath="$PROJECT_DIR$/templates/exemptions.j2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/vaccines.j2" beforeDir="false" afterPath="$PROJECT_DIR$/templates/vaccines.j2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/worksites.j2" beforeDir="false" afterPath="$PROJECT_DIR$/templates/worksites.j2" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,6 +38,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.flask.configuration.FlaskConfigurable" />
   </component>
   <component name="RunManager">
@@ -74,13 +82,6 @@
       <workItem from="1644558963994" duration="902000" />
       <workItem from="1644822104742" duration="65000" />
       <workItem from="1645146175185" duration="2987000" />
-    </task>
-    <task id="LOCAL-00022" summary="test query creation">
-      <created>1646344159220</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1646344159220</updated>
     </task>
     <task id="LOCAL-00023" summary="select query for worksites">
       <created>1646344585058</created>
@@ -418,7 +419,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646375976790</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="implement filter">
+      <created>1646376046224</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1646376046228</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
