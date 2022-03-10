@@ -181,19 +181,19 @@ def employees_vaccines():
             cursor.execute(vaccine_query)
             vaccine_options = cursor.fetchall()
             return render_template("employees_vaccines.j2", table_data=results, employee_options=employee_options, vaccine_options=vaccine_options)
-
-    # Display Employees_Vaccines table
-    select_query = "SELECT * FROM Employees_Vaccines;"
-    cursor = mysql.connection.cursor()
-    cursor.execute(select_query)
-    data = cursor.fetchall()
-    employee_query = "SELECT employee_id FROM Employees;"
-    cursor.execute(employee_query)
-    employee_options = cursor.fetchall()
-    vaccine_query = "SELECT vaccine_id FROM Vaccines;"
-    cursor.execute(vaccine_query)
-    vaccine_options = cursor.fetchall()
-    return render_template("employees_vaccines.j2", table_data=data, employee_options=employee_options, vaccine_options=vaccine_options)
+    else:
+        # Display Employees_Vaccines table
+        select_query = "SELECT * FROM Employees_Vaccines;"
+        cursor = mysql.connection.cursor()
+        cursor.execute(select_query)
+        data = cursor.fetchall()
+        employee_query = "SELECT employee_id FROM Employees;"
+        cursor.execute(employee_query)
+        employee_options = cursor.fetchall()
+        vaccine_query = "SELECT vaccine_id FROM Vaccines;"
+        cursor.execute(vaccine_query)
+        vaccine_options = cursor.fetchall()
+        return render_template("employees_vaccines.j2", table_data=data, employee_options=employee_options, vaccine_options=vaccine_options)
 
 
 # Listener
