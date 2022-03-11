@@ -44,17 +44,17 @@ def employees():
                 cur = mysql.connection.cursor()
                 cur.execute(query, (first_name, last_name, birthdate, termed, site_id, exemption_id))
                 mysql.connection.commit()
-                
+
             # redirect back to Employees page
             return redirect("/employees")
-        
+
         # Delete an employee
         elif request.form.get("delete-submit"):
             query = "DELETE FROM Employees WHERE employee_id=" + request.form["delete-submit"] + ";"
             cur = mysql.connection.cursor()
             cur.execute(query)
             mysql.connection.commit()
-            
+
             # redirect back to Employees page
             return redirect("/employees")
 
@@ -70,11 +70,12 @@ def employees():
         exemption_query = "SELECT exemption_id FROM Exemptions;"
         cursor.execute(exemption_query)
         exemption_options = cursor.fetchall()
-        return render_template("employees.j2", employees_table=data, site_options=site_options, exemption_options=exemption_options)
+        return render_template("employees.j2", employees_table=data, site_options=site_options,
+                               exemption_options=exemption_options)
 
-    
-@app.route("/edit_employees/<employee_id>", methods=["POST"])
-def edit_employees(employee_id):
+
+@app.route('/edit_employees', methods=["POST"])
+def edit_employees():
     if request.method == "POST":
         # process update
         if request.form.get("update-confirm"):
@@ -100,9 +101,9 @@ def edit_employees(employee_id):
             return redirect("/employees")
 
         # Display form to update employee
-        else:
+        elif request.form.get("update-submit"):
             # mySQL query to grab the info of the employee with the passed employee_id
-            select_query = "SELECT * FROM Employees WHERE employee_id = " + employee_id
+            select_query = "SELECT * FROM Employees WHERE employee_id = " + request.form["update-submit"]
             cur = mysql.connection.cursor()
             cur.execute(select_query)
             data = cur.fetchall()
@@ -120,13 +121,13 @@ def edit_employees(employee_id):
             exemption_options = cur.fetchall()
 
             # render edit_employee page passing our query, site, and exemption data to the edit_employee template
-            return render_template("edit_employees.j2", employee_info=data, site_options=site_options, exemption_options=exemption_options)
+            return render_template("edit_employees.j2", employee_info=data, site_options=site_options,
+                                   exemption_options=exemption_options)
 
- 
 
 @app.route('/worksites', methods=["POST", "GET"])
 def worksites():
-     # Insert a worksite into the Worksites table
+    # Insert a worksite into the Worksites table
     if request.method == "POST":
         if request.form.get("worksite-submit"):
             location = request.form["location"]
@@ -251,7 +252,8 @@ def employees_vaccines():
             search_query = "SELECT DISTINCT Employees.employee_id FROM Employees INNER JOIN Employees_Vaccines ON Employees.employee_id=Employees_Vaccines.employee_id;"
             cursor.execute(search_query)
             search_options = cursor.fetchall()
-            return render_template("employees_vaccines.j2", table_data=results, employee_options=employee_options, vaccine_options=vaccine_options, search_options=search_options)
+            return render_template("employees_vaccines.j2", table_data=results, employee_options=employee_options,
+                                   vaccine_options=vaccine_options, search_options=search_options)
 
         # Delete an employee_vaccine entry
         elif request.form.get("delete-submit"):
@@ -277,7 +279,8 @@ def employees_vaccines():
         search_query = "SELECT DISTINCT Employees.employee_id FROM Employees INNER JOIN Employees_Vaccines ON Employees.employee_id=Employees_Vaccines.employee_id;"
         cursor.execute(search_query)
         search_options = cursor.fetchall()
-        return render_template("employees_vaccines.j2", table_data=data, employee_options=employee_options, vaccine_options=vaccine_options, search_options=search_options)
+        return render_template("employees_vaccines.j2", table_data=data, employee_options=employee_options,
+                               vaccine_options=vaccine_options, search_options=search_options)
 
 
 # Listener
