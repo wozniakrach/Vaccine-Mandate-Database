@@ -63,8 +63,9 @@
         {% endif %}
         <td>{{employee['site_id']}}</td>
         <td>{{employee['exemption_id']}}</td>
-        <form action="{{url_for('edit_employees', employee_id=employee.employee_id)}}" method="GET">
-        <td><button type=submit value="{{employee['employee_id']}}" name="update-submit">Update</button>
+        <td>
+        <form action="{{url_for('edit_employees', employee_id=employee['employee_id'])}}" method="GET">
+        <button type=submit value="{{employee['employee_id']}}" name="update-submit">Update</button>
         </form>
         <form action="{{url_for('employees')}}" method="POST">
         <button type=submit value="{{employee['employee_id']}}" name="delete-submit">Delete</button>
