@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2180b1b6-79b8-4ac1-a176-bd7ca31788f6" name="Default Changelist" comment="employee table buttons">
+    <list default="true" id="2180b1b6-79b8-4ac1-a176-bd7ca31788f6" name="Default Changelist" comment="debug employees template">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/employees.j2" beforeDir="false" afterPath="$PROJECT_DIR$/templates/employees.j2" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,20 +77,6 @@
       <workItem from="1644558963994" duration="902000" />
       <workItem from="1644822104742" duration="65000" />
       <workItem from="1645146175185" duration="2987000" />
-    </task>
-    <task id="LOCAL-00053" summary="redirect url typo">
-      <created>1646368537748</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1646368537749</updated>
-    </task>
-    <task id="LOCAL-00054" summary="update add worksites form">
-      <created>1646369355976</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1646369355976</updated>
     </task>
     <task id="LOCAL-00055" summary="update add exemption form">
       <created>1646369826783</created>
@@ -423,7 +407,21 @@
       <option name="project" value="LOCAL" />
       <updated>1646979525559</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="edit get rout path">
+      <created>1646980417814</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1646980417815</updated>
+    </task>
+    <task id="LOCAL-00103" summary="debug employees template">
+      <created>1646980750884</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1646980750885</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -442,8 +440,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update form action for search emp_vacc" />
-    <MESSAGE value="update result display for no entries" />
     <MESSAGE value="update search to only allow searching for emp id with at least one emp_vacc" />
     <MESSAGE value="update search query" />
     <MESSAGE value="attempt one implement delete for exemptions" />
@@ -467,6 +463,8 @@
     <MESSAGE value="update form action for update" />
     <MESSAGE value="move closing table data tag" />
     <MESSAGE value="employee table buttons" />
-    <option name="LAST_COMMIT_MESSAGE" value="employee table buttons" />
+    <MESSAGE value="edit get rout path" />
+    <MESSAGE value="debug employees template" />
+    <option name="LAST_COMMIT_MESSAGE" value="debug employees template" />
   </component>
 </project>
