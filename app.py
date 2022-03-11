@@ -77,7 +77,7 @@ def employees():
 def edit_employees(employee_id):
     if request.method == "POST":
         # process update
-        if request.form.get("update-submit"):
+        if request.form.get("update-confirm"):
             # grab user form inputs
             first_name = request.form["first_name"]
             last_name = request.form["last_name"]
@@ -102,7 +102,7 @@ def edit_employees(employee_id):
         # Display form to update employee
         else:
             # mySQL query to grab the info of the employee with the passed employee_id
-            select_query = "SELECT * FROM Employees WHERE employee_id = %s" % employee_id
+            select_query = "SELECT * FROM Employees WHERE employee_id = " + employee_id
             cur = mysql.connection.cursor()
             cur.execute(select_query)
             data = cur.fetchall()

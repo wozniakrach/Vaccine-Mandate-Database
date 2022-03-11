@@ -20,7 +20,7 @@
         <input type="date" name="birthdate" value="{{employee_info['birthdate']}}" required/>
         <br>
         <label>Termed: </label>
-        {% if employee_info['termed'] == 1 %}
+        {% if (employee_info['termed'] == 1) %}
         <input type="radio" name="termed" value="1" checked required>
         <label for="true">True</label>
         <input type="radio" name="termed" value="0">
@@ -30,11 +30,11 @@
         <label for="true">True</label>
         <input type="radio" name="termed" value="0" checked>
         <label for="false">False</label><br>
-        <label>Site ID: </label>
         {% endif %}
+        <label>Site ID: </label>
         <select name="site_id" required>
             {% for id in site_options %}
-            {% if employee_info['site_id'] == id %}
+            {% if (employee_info['site_id'] == id['site_id']) %}
             <option value="{{id['site_id']}}" selected>{{id['site_id']}}</option>
             {% else %}
             <option value="{{id['site_id']}}">{{id['site_id']}}</option>
@@ -44,7 +44,7 @@
         <label>Exemption ID: </label>
         <select name="exemption_id">
             {% for id in exemption_options %}
-            {% if employee_info['exemption_id'] == id %}
+            {% if (employee_info['exemption_id'] == id['exemption_id']) %}
             <option value="{{id['exemption_id']}}" selected>{{id['exemption_id']}}</option>
             {% else %}
             <option value="{{id['exemption_id']}}">{{id['exemption_id']}}</option>
@@ -52,7 +52,7 @@
             {% endfor %}
             <option value="'-1'">N/A</option>
         </select><br>
-        <input type="submit" name="update-submit">
+        <input type="submit" name="update-confirm">
     </fieldset>
 </form>
 {% endblock %}
