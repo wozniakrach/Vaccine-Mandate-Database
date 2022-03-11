@@ -76,8 +76,31 @@ def employees():
 @app.route("/edit_employees/<employee_id>", methods=["POST"])
 def edit_employees(employee_id):
     if request.method == "POST":
+        # process update
+        if request.form.get("update-submit"):
+            # grab user form inputs
+            first_name = request.form["first_name"]
+            last_name = request.form["last_name"]
+            birthdate = request.form["birthdate"]
+            termed = request.form["termed"]
+            site_id = request.form["site_id"]
+            exemption_id = request.form["exemption_id"]
+            # account for null exemption_id
+            if exemption_id == "-1":
+                exemption_id = "Null"
+
+            query = "UPDATE Employees SET first_name=%s, last_name=%s, birthdate=%s, termed=%s, site_id=%s, " \
+                    "exemption_id=%s WHERE employee_id=%s;" % first_name, last_name, birthdate, termed, site_id, \
+                    exemption_id, employee_id
+            cur = mysql.connection.cursor()
+            cur.execute(query, (first_name, last_name, birthdate, termed, site_id))
+            mysql.connection.commit()
+
+            # redirect back to people page after we execute the update query
+            return redirect("/employees")
+
         # Display form to update employee
-        if employee_id:
+        else:
             # mySQL query to grab the info of the employee with the passed employee_id
             select_query = "SELECT * FROM Employees WHERE employee_id = %s" % employee_id
             cur = mysql.connection.cursor()
@@ -99,27 +122,6 @@ def edit_employees(employee_id):
             # render edit_employee page passing our query, site, and exemption data to the edit_employee template
             return render_template("edit_employees.j2", employee_info=data, site_options=site_options, exemption_options=exemption_options)
 
-        elif request.form.get("update-submit"):
-            # grab user form inputs
-            first_name = request.form["first_name"]
-            last_name = request.form["last_name"]
-            birthdate = request.form["birthdate"]
-            termed = request.form["termed"]
-            site_id = request.form["site_id"]
-            exemption_id = request.form["exemption_id"]
-            # account for null exemption_id
-            if exemption_id == "-1":
-                exemption_id = "Null"
-
-            query = "UPDATE Employees SET first_name=%s, last_name=%s, birthdate=%s, termed=%s, site_id=%s, " \
-                    "exemption_id=%s WHERE employee_id=%s;" % first_name, last_name, birthdate, termed, site_id, \
-                    exemption_id, employee_id
-            cur = mysql.connection.cursor()
-            cur.execute(query, (first_name, last_name, birthdate, termed, site_id))
-            mysql.connection.commit()
-
-            # redirect back to people page after we execute the update query
-            return redirect("/employees")       
  
 
 @app.route('/worksites', methods=["POST", "GET"])
