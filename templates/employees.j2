@@ -67,8 +67,9 @@
         <td><button type=submit value="{{employee['employee_id']}}" name="update-submit">Update</button>
         </form>
         <form action="{{url_for('employees')}}" method="POST">
-        <button type=submit value="{{employee['employee_id']}}" name="delete-submit">Delete</button></td>
+        <button type=submit value="{{employee['employee_id']}}" name="delete-submit">Delete</button>
         </form>
+        </td>
     </tr>
     {% endfor %}
 </table>
