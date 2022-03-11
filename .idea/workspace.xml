@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2180b1b6-79b8-4ac1-a176-bd7ca31788f6" name="Default Changelist" comment="add template for edit employees + alter queries for route handler">
-      <change beforePath="$PROJECT_DIR$/templates/employees.j2" beforeDir="false" afterPath="$PROJECT_DIR$/templates/employees.j2" afterDir="false" />
+    <list default="true" id="2180b1b6-79b8-4ac1-a176-bd7ca31788f6" name="Default Changelist" comment="update forms/form action for employees update/delete">
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,13 +77,6 @@
       <workItem from="1644558963994" duration="902000" />
       <workItem from="1644822104742" duration="65000" />
       <workItem from="1645146175185" duration="2987000" />
-    </task>
-    <task id="LOCAL-00047" summary="add post method for insert employees">
-      <created>1646363939413</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1646363939413</updated>
     </task>
     <task id="LOCAL-00048" summary="edit post method for add employee">
       <created>1646364378311</created>
@@ -421,7 +414,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646974912320</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="update forms/form action for employees update/delete">
+      <created>1646975340217</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1646975340219</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -440,7 +440,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="remove form elements associated with auto incrementing ids" />
     <MESSAGE value="update worksites" />
     <MESSAGE value="implement filter" />
     <MESSAGE value="set required input fields for all not NULL vars" />
@@ -465,6 +464,7 @@
     <MESSAGE value="employees template formatting" />
     <MESSAGE value="fix exemptions/employee relationship to be 1:1" />
     <MESSAGE value="add template for edit employees + alter queries for route handler" />
-    <option name="LAST_COMMIT_MESSAGE" value="add template for edit employees + alter queries for route handler" />
+    <MESSAGE value="update forms/form action for employees update/delete" />
+    <option name="LAST_COMMIT_MESSAGE" value="update forms/form action for employees update/delete" />
   </component>
 </project>

@@ -69,7 +69,7 @@ def employees():
         site_query = "SELECT site_id FROM Worksites;"
         cursor.execute(site_query)
         site_options = cursor.fetchall()
-        exemption_query = "SELECT exemption_id FROM Exemptions EXCEPT SELECT exemption_id FROM Employees;"
+        exemption_query = "SELECT exemption_id FROM Exemptions;"
         cursor.execute(exemption_query)
         exemption_options = cursor.fetchall()
         return render_template("employees.j2", employees_table=data, site_options=site_options, exemption_options=exemption_options)
@@ -91,7 +91,7 @@ def edit_employee(employee_id):
         site_options = cur.fetchall()
 
         # query for exemptions dropdown
-        exemption_query = "SELECT exemption_id FROM Exemptions EXCEPT SELECT exemption_id FROM Employees;"
+        exemption_query = "SELECT exemption_id FROM Exemptions;"
         cur = mysql.connection.cursor()
         cur.execute(exemption_query)
         exemption_options = cur.fetchall()

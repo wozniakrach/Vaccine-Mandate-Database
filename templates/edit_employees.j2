@@ -43,11 +43,12 @@
         </select><br>
         <label>Exemption ID: </label>
         <select name="exemption_id">
-            {% if employee_info['exemption_id'] %}
-            <option value="{{employee_info['exemption_id']}}" selected>{{employee_info['exemption_id']}}</option>
-            {% endif %}
             {% for id in exemption_options %}
+            {% if employee_info['exemption_id'] == id %}
+            <option value="{{id['exemption_id']}}" selected>{{id['exemption_id']}}</option>
+            {% else %}
             <option value="{{id['exemption_id']}}">{{id['exemption_id']}}</option>
+            {% endif %}
             {% endfor %}
             <option value="'-1'">N/A</option>
         </select><br>
