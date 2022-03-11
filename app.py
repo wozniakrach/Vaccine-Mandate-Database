@@ -86,13 +86,14 @@ def edit_employees():
             termed = request.form["termed"]
             site_id = request.form["site_id"]
             exemption_id = request.form["exemption_id"]
+            employee_id = request.form["employee_id"]
             # account for null exemption_id
             if exemption_id == "-1":
                 exemption_id = "Null"
 
             query = "UPDATE Employees SET first_name=%s, last_name=%s, birthdate=%s, termed=%s, site_id=%s, " \
                     "exemption_id=%s WHERE employee_id=%s;" % (first_name, last_name, birthdate, termed, site_id, \
-                    exemption_id, request.form["update-confirm"])
+                                                               exemption_id, employee_id)
             cur = mysql.connection.cursor()
             cur.execute(query)
             mysql.connection.commit()

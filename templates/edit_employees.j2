@@ -10,6 +10,7 @@
     <fieldset class="add-entity">
         <legend>Edit Employee</legend>
         <p style="font-weight: bold">Employee ID: {{employee_info['employee_id']}}</p>
+        <input type="hidden" name="employee_id" value="{{employee_info['employee_id']}}">
         <label for="first_name">First Name: </label>
         <input type="text" name="first_name" value="{{employee_info['first_name']}}" required/>
         <br>
@@ -52,7 +53,7 @@
             {% endfor %}
             <option value="'-1'">N/A</option>
         </select><br>
-        <input type="submit" name="update-confirm" value="{{employee_info['employee_id']}}">Submit</input>
+        <input type="submit" name="update-confirm">
     </fieldset>
 </form>
 {% endblock %}
