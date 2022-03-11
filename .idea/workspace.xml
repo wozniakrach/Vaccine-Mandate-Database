@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2180b1b6-79b8-4ac1-a176-bd7ca31788f6" name="Default Changelist" comment="update search query">
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/exemptions.j2" beforeDir="false" afterPath="$PROJECT_DIR$/templates/exemptions.j2" afterDir="false" />
+    <list default="true" id="2180b1b6-79b8-4ac1-a176-bd7ca31788f6" name="Default Changelist" comment="attempt one implement delete for exemptions">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,13 +77,6 @@
       <workItem from="1644558963994" duration="902000" />
       <workItem from="1644822104742" duration="65000" />
       <workItem from="1645146175185" duration="2987000" />
-    </task>
-    <task id="LOCAL-00030" summary="add vaccines select">
-      <created>1646357973477</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1646357973477</updated>
     </task>
     <task id="LOCAL-00031" summary="typo">
       <created>1646358163395</created>
@@ -422,7 +414,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646958225034</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="attempt one implement delete for exemptions">
+      <created>1646958622995</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1646958622997</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -441,7 +440,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="edit post method for add employee" />
     <MESSAGE value="add employee form input variables" />
     <MESSAGE value="update submit button" />
     <MESSAGE value="set name for add employees form" />
@@ -466,6 +464,7 @@
     <MESSAGE value="update result display for no entries" />
     <MESSAGE value="update search to only allow searching for emp id with at least one emp_vacc" />
     <MESSAGE value="update search query" />
-    <option name="LAST_COMMIT_MESSAGE" value="update search query" />
+    <MESSAGE value="attempt one implement delete for exemptions" />
+    <option name="LAST_COMMIT_MESSAGE" value="attempt one implement delete for exemptions" />
   </component>
 </project>

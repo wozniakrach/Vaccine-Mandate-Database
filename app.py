@@ -178,8 +178,8 @@ def employees_vaccines():
 
         # Display filtered results if search was made
         elif request.form.get("search-submit"):
-            employee_id = request.form["employee_id"]
-            search_query = "SELECT * FROM Employees_Vaccines WHERE employee_id = %s;"
+            employee_id = int(request.form["employee_id"])
+            search_query = "SELECT * FROM Employees_Vaccines WHERE employee_id = %d;"
             cursor = mysql.connection.cursor()
             cursor.execute(search_query, employee_id)
             results = cursor.fetchall()
