@@ -26,6 +26,7 @@
         <th>Type</th>
         <th></th>
     </thead>
+    <form action="{{url_for('exemptions')}}" method="POST">
     {% for exemption in exemptions_table %}
     <tr>
         <td>{{exemption['exemption_id']}}</td>
@@ -35,8 +36,9 @@
         <td>False</td>
         {% endif %}
         <td>{{exemption['exemption_type']}}</td>
-        <td><button>Delete</button></td>
+        <td><button type=submit value={{exemption['exemption_id']}} name="delete-submit">Delete</button></td>
     </tr>
     {% endfor %}
+    </form>
 </table>
 {% endblock %}
