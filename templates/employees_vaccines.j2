@@ -42,7 +42,7 @@
 <form id="search-form" action="{{url_for('employees_vaccines')}}" method="POST">
     <p>Search by Employee ID: </p>
     <select name="employee_id" required>
-        {% for id in employee_options %}
+        {% for id in search_options %}
         <option value="{{id['employee_id']}}">{{id['employee_id']}}</option>
         {% endfor %}
     </select>
@@ -58,7 +58,6 @@
         <th>Dose</th>
         <th></th>
     </thead>
-    {% if table_data|length > 0 %}
     {% for entry in table_data %}
     <tr>
         <td>{{entry['employee_vaccine_id']}}</td>
@@ -73,10 +72,5 @@
         <td><button>Delete</button></td>
     </tr>
     {% endfor %}
-    {% else %}
-    <tr>
-        <td>No Entries Were Found For Designated Employee</td>
-    </tr>
-    {% endif %}
 </table>
 {% endblock %}

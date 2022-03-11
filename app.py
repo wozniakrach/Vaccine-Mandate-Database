@@ -180,7 +180,10 @@ def employees_vaccines():
             vaccine_query = "SELECT vaccine_id FROM Vaccines;"
             cursor.execute(vaccine_query)
             vaccine_options = cursor.fetchall()
-            return render_template("employees_vaccines.j2", table_data=results, employee_options=employee_options, vaccine_options=vaccine_options)
+            search_query = "SELECT DISTINCT employee_id FROM Employees_Vaccines;"
+            cursor.execute(search_query)
+            search_options = cursor.fetchall()
+            return render_template("employees_vaccines.j2", table_data=results, employee_options=employee_options, vaccine_options=vaccine_options, search_options=search_options)
     else:
         # Display Employees_Vaccines table
         select_query = "SELECT * FROM Employees_Vaccines;"
@@ -193,7 +196,10 @@ def employees_vaccines():
         vaccine_query = "SELECT vaccine_id FROM Vaccines;"
         cursor.execute(vaccine_query)
         vaccine_options = cursor.fetchall()
-        return render_template("employees_vaccines.j2", table_data=data, employee_options=employee_options, vaccine_options=vaccine_options)
+        search_query = "SELECT DISTINCT employee_id FROM Employees_Vaccines;"
+        cursor.execute(search_query)
+        search_options = cursor.fetchall()
+        return render_template("employees_vaccines.j2", table_data=data, employee_options=employee_options, vaccine_options=vaccine_options, search_options=search_options)
 
 
 # Listener
