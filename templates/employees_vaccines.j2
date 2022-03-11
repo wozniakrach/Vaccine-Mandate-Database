@@ -58,6 +58,7 @@
         <th>Dose</th>
         <th></th>
     </thead>
+    <form action="{{url_for('employees_vaccines')}}" method="POST">
     {% for entry in table_data %}
     <tr>
         <td>{{entry['employee_vaccine_id']}}</td>
@@ -69,8 +70,9 @@
         {% else %}
         <td>{{entry['dose']}}</td>
         {% endif %}
-        <td><button>Delete</button></td>
+        <td><button type=submit value="{{entry['employee_vaccine_id']}}" name="delete-submit">Delete</button></td>
     </tr>
     {% endfor %}
+    </form>
 </table>
 {% endblock %}

@@ -192,6 +192,16 @@ def employees_vaccines():
             cursor.execute(search_query)
             search_options = cursor.fetchall()
             return render_template("employees_vaccines.j2", table_data=results, employee_options=employee_options, vaccine_options=vaccine_options, search_options=search_options)
+
+        # Delete an employee_vaccine entry
+        elif request.form.get("delete-submit"):
+            query = "DELETE FROM Employees_Vaccines WHERE employee_vaccine_id=" + request.form["employee_vaccine_id"] + ";"
+            cur = mysql.connection.cursor()
+            cur.execute(query)
+            mysql.connection.commit()
+            # redirect back to Employees_Vaccines page
+            return redirect("/employees_vaccines")
+
     else:
         # Display Employees_Vaccines table
         select_query = "SELECT * FROM Employees_Vaccines;"
