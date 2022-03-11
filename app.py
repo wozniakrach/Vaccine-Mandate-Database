@@ -180,7 +180,7 @@ def employees_vaccines():
             vaccine_query = "SELECT vaccine_id FROM Vaccines;"
             cursor.execute(vaccine_query)
             vaccine_options = cursor.fetchall()
-            search_query = "SELECT DISTINCT employee_id FROM Employees_Vaccines;"
+            search_query = "SELECT DISTINCT Employees.employee_id FROM Employees INNER JOIN Employees_Vaccines ON Employees.employee_id=Employees_Vaccines.employee_id;"
             cursor.execute(search_query)
             search_options = cursor.fetchall()
             return render_template("employees_vaccines.j2", table_data=results, employee_options=employee_options, vaccine_options=vaccine_options, search_options=search_options)
@@ -196,7 +196,7 @@ def employees_vaccines():
         vaccine_query = "SELECT vaccine_id FROM Vaccines;"
         cursor.execute(vaccine_query)
         vaccine_options = cursor.fetchall()
-        search_query = "SELECT DISTINCT employee_id FROM Employees_Vaccines;"
+        search_query = "SELECT DISTINCT Employees.employee_id FROM Employees INNER JOIN Employees_Vaccines ON Employees.employee_id=Employees_Vaccines.employee_id;"
         cursor.execute(search_query)
         search_options = cursor.fetchall()
         return render_template("employees_vaccines.j2", table_data=data, employee_options=employee_options, vaccine_options=vaccine_options, search_options=search_options)
