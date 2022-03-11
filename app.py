@@ -48,6 +48,16 @@ def employees():
                 
             # redirect back to Employees page
             return redirect("/employees")
+        
+        # Delete an employee
+        elif request.form.get("delete-submit"):
+            query = "DELETE FROM Employees WHERE employee_id=" + request.form["delete-submit"] + ";"
+            cur = mysql.connection.cursor()
+            cur.execute(query)
+            mysql.connection.commit()
+            
+            # redirect back to Employees page
+            return redirect("/employees")
 
     # Display Employees table
     if request.method == "GET":
