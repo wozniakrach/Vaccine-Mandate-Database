@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2180b1b6-79b8-4ac1-a176-bd7ca31788f6" name="Default Changelist" comment="add delete employees_vaccines functionality">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/employees.j2" beforeDir="false" afterPath="$PROJECT_DIR$/templates/employees.j2" afterDir="false" />
-    </list>
+    <list default="true" id="2180b1b6-79b8-4ac1-a176-bd7ca31788f6" name="Default Changelist" comment="quotes and form tags for employees template" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,13 +75,6 @@
       <workItem from="1644558963994" duration="902000" />
       <workItem from="1644822104742" duration="65000" />
       <workItem from="1645146175185" duration="2987000" />
-    </task>
-    <task id="LOCAL-00041" summary="add dropdown selects for employees form">
-      <created>1646361382726</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1646361382727</updated>
     </task>
     <task id="LOCAL-00042" summary="add dropdown selects for employees_vaccines form">
       <created>1646361815415</created>
@@ -422,7 +412,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646968183275</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="quotes and form tags for employees template">
+      <created>1646968699541</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1646968699542</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -441,7 +438,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="typo in exemption insert query" />
     <MESSAGE value="update add emp-vacc form" />
     <MESSAGE value="typo" />
     <MESSAGE value="debug exemptions" />
@@ -466,6 +462,7 @@
     <MESSAGE value="emp_vacc search update" />
     <MESSAGE value="update handler for delete exemption" />
     <MESSAGE value="add delete employees_vaccines functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="add delete employees_vaccines functionality" />
+    <MESSAGE value="quotes and form tags for employees template" />
+    <option name="LAST_COMMIT_MESSAGE" value="quotes and form tags for employees template" />
   </component>
 </project>

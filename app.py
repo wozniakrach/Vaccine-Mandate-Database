@@ -205,7 +205,7 @@ def employees_vaccines():
 
         # Delete an employee_vaccine entry
         elif request.form.get("delete-submit"):
-            query = "DELETE FROM Employees_Vaccines WHERE employee_vaccine_id=" + request.form["employee_vaccine_id"] + ";"
+            query = "DELETE FROM Employees_Vaccines WHERE employee_vaccine_id=" + request.form["delete-submit"] + ";"
             cur = mysql.connection.cursor()
             cur.execute(query)
             mysql.connection.commit()
