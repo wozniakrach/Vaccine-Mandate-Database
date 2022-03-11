@@ -50,8 +50,10 @@ def employees():
         
         # Delete an employee
         elif request.form.get("delete-submit"):
-            query = "DELETE FROM Employees WHERE employee_id=" + request.form["delete-submit"] + ";"
+            query = "DELETE FROM Exemptions WHERE Exemptions.employee_id=" + request.form["delete-submit"] + ";"
             cur = mysql.connection.cursor()
+            cur.execute(query)
+            query = "DELETE FROM Employees WHERE employee_id=" + request.form["delete-submit"] + ";"
             cur.execute(query)
             mysql.connection.commit()
             
