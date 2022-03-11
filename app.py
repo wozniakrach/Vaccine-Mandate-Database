@@ -119,9 +119,9 @@ def exemptions():
 
         # Delete an exemption
         elif request.form.get("delete-submit"):
-            query = "DELETE * FROM Exemptions WHERE exemption_id=%s;"
+            query = "DELETE * FROM Exemptions WHERE exemption_id=" + request.form["delete-submit"] + ";"
             cur = mysql.connection.cursor()
-            cur.execute(query, request.form["delete-submit"])
+            cur.execute(query)
             mysql.connection.commit()
             # redirect back to Exemptions page
             return redirect("/exemptions")
