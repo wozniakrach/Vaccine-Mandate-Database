@@ -63,8 +63,7 @@
         {% endif %}
         <td>{{employee['site_id']}}</td>
         <td>{{employee['exemption_id']}}</td>
-        <td><button type=submit value={{employee['employee_id']}} name="update-submit">Update</button></td>
-        <td><button type=submit value={{employee['employee_id']}} name="delete-submit">Delete</button></td>
+        <td><button type=submit value={{employee['employee_id']}} name="update-submit">Update</button><button type=submit value={{employee['employee_id']}} name="delete-submit">Delete</button></td>
     </tr>
     {% endfor %}
 </table>
