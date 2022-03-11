@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2180b1b6-79b8-4ac1-a176-bd7ca31788f6" name="Default Changelist" comment="update exemptions handler for delete">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="2180b1b6-79b8-4ac1-a176-bd7ca31788f6" name="Default Changelist" comment="attempt to fix exemptions delete and filter for emp_vacc" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,13 +75,6 @@
       <workItem from="1644558963994" duration="902000" />
       <workItem from="1644822104742" duration="65000" />
       <workItem from="1645146175185" duration="2987000" />
-    </task>
-    <task id="LOCAL-00033" summary="add exemptions select">
-      <created>1646358766457</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1646358766457</updated>
     </task>
     <task id="LOCAL-00034" summary="add employees_vaccines select">
       <created>1646359047587</created>
@@ -421,7 +412,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646960354144</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="attempt to fix exemptions delete and filter for emp_vacc">
+      <created>1646962831782</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1646962831784</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -440,7 +438,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="set name for add employees form" />
     <MESSAGE value="redirect url typo" />
     <MESSAGE value="update add worksites form" />
     <MESSAGE value="update add exemption form" />
@@ -465,6 +462,7 @@
     <MESSAGE value="attempt one implement delete for exemptions" />
     <MESSAGE value="change type for search filter" />
     <MESSAGE value="update exemptions handler for delete" />
-    <option name="LAST_COMMIT_MESSAGE" value="update exemptions handler for delete" />
+    <MESSAGE value="attempt to fix exemptions delete and filter for emp_vacc" />
+    <option name="LAST_COMMIT_MESSAGE" value="attempt to fix exemptions delete and filter for emp_vacc" />
   </component>
 </project>
