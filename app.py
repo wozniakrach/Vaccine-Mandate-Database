@@ -72,18 +72,6 @@ def employees():
         cursor.execute(exemption_query)
         exemption_options = cursor.fetchall()
         return render_template("employees.j2", employees_table=data, site_options=site_options, exemption_options=exemption_options)
-
-    
-@app.route("/delete_employees/<int:employee_id>")
-def delete_people(employee_id):
-    # mySQL query to delete the person with our passed employee_id
-    query = "DELETE FROM Employees WHERE employee_id = '%s';"
-    cur = mysql.connection.cursor()
-    cur.execute(query, (employee_id,))
-    mysql.connection.commit()
-
-    # redirect back to people page
-    return redirect("/employees")    
     
 
 @app.route('/worksites', methods=["POST", "GET"])
