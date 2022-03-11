@@ -73,32 +73,33 @@ def employees():
         return render_template("employees.j2", employees_table=data, site_options=site_options, exemption_options=exemption_options)
 
     
-@app.route("/edit_employees/<employee_id>", methods=["POST", "GET"])
+@app.route("/edit_employees/<employee_id>", methods=["POST"])
 def edit_employees(employee_id):
-    if request.method == "GET":
-        # mySQL query to grab the info of the employee with the passed employee_id
-        select_query = "SELECT * FROM Employees WHERE employee_id = %s" % employee_id
-        cur = mysql.connection.cursor()
-        cur.execute(select_query)
-        data = cur.fetchall()
-
-        # mySQL query to grab site_id for dropdown
-        site_query = "SELECT site_id FROM Worksites"
-        cur = mysql.connection.cursor()
-        cur.execute(site_query)
-        site_options = cur.fetchall()
-
-        # query for exemptions dropdown
-        exemption_query = "SELECT exemption_id FROM Exemptions;"
-        cur = mysql.connection.cursor()
-        cur.execute(exemption_query)
-        exemption_options = cur.fetchall()
-
-        # render edit_employee page passing our query, site, and exemption data to the edit_employee template
-        return render_template("edit_employees.j2", employee_info=data, site_options=site_options, exemption_options=exemption_options)
-
     if request.method == "POST":
-        if request.form.get("update-submit"):
+        # Display form to update employee
+        if employee_id:
+            # mySQL query to grab the info of the employee with the passed employee_id
+            select_query = "SELECT * FROM Employees WHERE employee_id = %s" % employee_id
+            cur = mysql.connection.cursor()
+            cur.execute(select_query)
+            data = cur.fetchall()
+
+            # mySQL query to grab site_id for dropdown
+            site_query = "SELECT site_id FROM Worksites"
+            cur = mysql.connection.cursor()
+            cur.execute(site_query)
+            site_options = cur.fetchall()
+
+            # query for exemptions dropdown
+            exemption_query = "SELECT exemption_id FROM Exemptions;"
+            cur = mysql.connection.cursor()
+            cur.execute(exemption_query)
+            exemption_options = cur.fetchall()
+
+            # render edit_employee page passing our query, site, and exemption data to the edit_employee template
+            return render_template("edit_employees.j2", employee_info=data, site_options=site_options, exemption_options=exemption_options)
+
+        elif request.form.get("update-submit"):
             # grab user form inputs
             first_name = request.form["first_name"]
             last_name = request.form["last_name"]
