@@ -91,8 +91,8 @@ def edit_employees():
                 exemption_id = "Null"
 
             query = "UPDATE Employees SET first_name=%s, last_name=%s, birthdate=%s, termed=%s, site_id=%s, " \
-                    "exemption_id=%s WHERE employee_id=%s;" % first_name, last_name, birthdate, termed, site_id, \
-                    exemption_id, request.form["update-confirm"]
+                    "exemption_id=%s WHERE employee_id=%s;" % (first_name, last_name, birthdate, termed, site_id, \
+                    exemption_id, request.form["update-confirm"])
             cur = mysql.connection.cursor()
             cur.execute(query)
             mysql.connection.commit()
