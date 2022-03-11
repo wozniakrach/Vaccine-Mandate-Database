@@ -76,7 +76,7 @@ def employees():
 
     
 @app.route("/edit_employees/<employee_id>", methods=["POST", "GET"])
-def edit_employee(employee_id):
+def edit_employees(employee_id):
     if request.method == "GET":
         # mySQL query to grab the info of the employee with the passed employee_id
         select_query = "SELECT * FROM Employees WHERE employee_id = %s" % employee_id
