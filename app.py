@@ -79,23 +79,25 @@ def employees():
 def edit_employee(employee_id):
     if request.method == "GET":
         # mySQL query to grab the info of the employee with the passed employee_id
-        select_query = "SELECT * FROM Employees WHERE employee_id = %s" % (employee_id)
+        select_query = "SELECT * FROM Employees WHERE employee_id = %s" % employee_id
         cur = mysql.connection.cursor()
         cur.execute(select_query)
         data = cur.fetchall()
 
-        # mySQL query to grab site_id and exemption_id data for our dropdown
+        # mySQL query to grab site_id for dropdown
         site_query = "SELECT site_id FROM Worksites"
         cur = mysql.connection.cursor()
         cur.execute(site_query)
         site_options = cur.fetchall()
-        exemption_query = "SELECT exemption_id FROM Exemptions"
+
+        # query for exemptions dropdown
+        exemption_query = "SELECT exemption_id FROM Exemptions EXCEPT SELECT exemption_id FROM Employees;"
         cur = mysql.connection.cursor()
         cur.execute(exemption_query)
         exemption_options = cur.fetchall()
 
         # render edit_employee page passing our query, site, and exemption data to the edit_employee template
-        return render_template("edit_employees.j2", employees_table=data, site_options=site_options, exemption_options=exemption_options)
+        return render_template("edit_employees.j2", employee_info=data, site_options=site_options, exemption_options=exemption_options)
 
     if request.method == "POST":
         if request.form.get("update-submit"):
@@ -106,20 +108,16 @@ def edit_employee(employee_id):
             termed = request.form["termed"]
             site_id = request.form["site_id"]
             exemption_id = request.form["exemption_id"]
-
-            # Account for null exemption_id
+            # account for null exemption_id
             if exemption_id == "-1":
-                query = "INSERT INTO Employees (first_name, last_name, birthdate, termed, site_id) VALUES (%s, %s, %s, %s, %s)"
-                cur = mysql.connection.cursor()
-                cur.execute(query, (first_name, last_name, birthdate, termed, site_id))
-                mysql.connection.commit()
+                exemption_id = "Null"
 
-            # If there are no null inputs
-            else:
-                query = "INSERT INTO Employees (first_name, last_name, birthdate, termed, site_id, exemption_id) VALUES (%s, %s, %s, %s, %s, %s)"
-                cur = mysql.connection.cursor()
-                cur.execute(query, (first_name, last_name, birthdate, termed, site_id, exemption_id))
-                mysql.connection.commit()
+            query = "UPDATE Employees SET first_name=%s, last_name=%s, birthdate=%s, termed=%s, site_id=%s, " \
+                    "exemption_id=%s WHERE employee_id=%s;" % first_name, last_name, birthdate, termed, site_id, \
+                    exemption_id, employee_id
+            cur = mysql.connection.cursor()
+            cur.execute(query, (first_name, last_name, birthdate, termed, site_id))
+            mysql.connection.commit()
 
             # redirect back to people page after we execute the update query
             return redirect("/employees")       

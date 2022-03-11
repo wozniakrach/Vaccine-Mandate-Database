@@ -1,0 +1,57 @@
+{% extends 'main.html' %}
+
+{% block head %}
+<title>Edit Employees | Covid-19 Vaccine Mandate Database</title>
+{% endblock %}
+
+{% block body %}
+<h1 class="page-title">Edit Employee</h1>
+<form action="{{url_for('edit_employees')}}" method="POST">
+    <fieldset class="edit">
+        <legend>Edit Employee</legend>
+        <p style="font-weight: bold">Employee ID: {{employee_info['employee_id']}}</p>
+        <label for="first_name">First Name: </label>
+        <input type="text" name="first_name" value="{{employee_info['first_name']}}" required/>
+        <br>
+        <label for="last_name">Last Name: </label>
+        <input type="text" name="last_name" value="{{employee_info['last_name']}}" required/>
+        <br>
+        <label for="birthdate">Birthdate: </label>
+        <input type="date" name="birthdate" value="{{employee_info['birthdate']}}" required/>
+        <br>
+        <label>Termed: </label>
+        {% if employee_info['termed'] == 1 %}
+        <input type="radio" name="termed" value="1" checked required>
+        <label for="true">True</label>
+        <input type="radio" name="termed" value="0">
+        <label for="false">False</label><br>
+        {% else %}
+        <input type="radio" name="termed" value="1" required>
+        <label for="true">True</label>
+        <input type="radio" name="termed" value="0" checked>
+        <label for="false">False</label><br>
+        <label>Site ID: </label>
+        {% endif %}
+        <select name="site_id" required>
+            {% for id in site_options %}
+            {% if employee_info['site_id'] == id %}
+            <option value="{{id['site_id']}}" selected>{{id['site_id']}}</option>
+            {% else %}
+            <option value="{{id['site_id']}}">{{id['site_id']}}</option>
+            {% endif %}
+            {% endfor %}
+        </select><br>
+        <label>Exemption ID: </label>
+        <select name="exemption_id">
+            {% if employee_info['exemption_id'] %}
+            <option value="{{employee_info['exemption_id']}}" selected>{{employee_info['exemption_id']}}</option>
+            {% endif %}
+            {% for id in exemption_options %}
+            <option value="{{id['exemption_id']}}">{{id['exemption_id']}}</option>
+            {% endfor %}
+            <option value="'-1'">N/A</option>
+        </select><br>
+        <input type="submit" name="update-submit">
+    </fieldset>
+</form>
+{% endblock %}
