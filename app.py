@@ -1,7 +1,6 @@
-from flask import Flask, render_template, json, redirect
-from flask_mysqldb import MySQL
+from flask import Flask, render_template, redirect
 from flask import request
-import os
+from flask_mysqldb import MySQL
 
 app = Flask(__name__)
 
