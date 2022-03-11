@@ -119,7 +119,7 @@ def exemptions():
 
         # Delete an exemption
         elif request.form.get("delete-submit"):
-            query = "DELETE * FROM Exemptions WHERE exemption_id=%d;"
+            query = "DELETE * FROM Exemptions WHERE exemption_id=%s;"
             cur = mysql.connection.cursor()
             cur.execute(query, request.form["delete-submit"])
             mysql.connection.commit()
@@ -178,8 +178,8 @@ def employees_vaccines():
 
         # Display filtered results if search was made
         elif request.form.get("search-submit"):
-            employee_id = int(request.form["employee_id"])
-            search_query = "SELECT * FROM Employees_Vaccines WHERE employee_id = %d;"
+            employee_id = request.form["employee_id"]
+            search_query = "SELECT * FROM Employees_Vaccines WHERE employee_id = %s;"
             cursor = mysql.connection.cursor()
             cursor.execute(search_query, employee_id)
             results = cursor.fetchall()
