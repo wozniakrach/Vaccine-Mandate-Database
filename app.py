@@ -75,7 +75,7 @@ def employees():
         return render_template("employees.j2", employees_table=data, site_options=site_options, exemption_options=exemption_options)
 
     
-@app.route("/edit_employees/<int:employee_id>", methods=["POST", "GET"])
+@app.route("/edit_employees/<employee_id>", methods=["POST", "GET"])
 def edit_employee(employee_id):
     if request.method == "GET":
         # mySQL query to grab the info of the employee with the passed employee_id
