@@ -93,7 +93,7 @@ def edit_employees():
                 query = "UPDATE Employees SET first_name=%s, last_name=%s, birthdate=%s, termed=%s, site_id=%s, exemption_id=null" \
                         "WHERE employee_id=%s;"
                 cur = mysql.connection.cursor()
-                cur.execute(query, (first_name, last_name, birthdate, termed, site_id))
+                cur.execute(query, (first_name, last_name, birthdate, termed, site_id, eemployee_id))
                 mysql.connection.commit()
 
             # no null values
