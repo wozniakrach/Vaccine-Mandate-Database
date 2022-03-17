@@ -32,7 +32,7 @@ def employees():
             exemption_id = request.form["exemption_id"]
 
             # Account for null exemption_id
-            if exemption_id == "-1":
+            if exemption_id == -1:
                 query = "INSERT INTO Employees (first_name, last_name, birthdate, termed, site_id) VALUES (%s, %s, %s, %s, %s)"
                 cur = mysql.connection.cursor()
                 cur.execute(query, (first_name, last_name, birthdate, termed, site_id))
@@ -88,8 +88,8 @@ def edit_employees():
             exemption_id = request.form["exemption_id"]
             employee_id = request.form["employee_id"]
             # account for null exemption_id
-            if exemption_id == "-1":
-                exemption_id = "Null"
+            if exemption_id == -1:
+                exemption_id = None
 
             query = "UPDATE Employees SET first_name=%s, last_name=%s, birthdate=%s, termed=%s, site_id=%s, " \
                     "exemption_id=%s WHERE employee_id=%s;"

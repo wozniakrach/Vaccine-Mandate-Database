@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2180b1b6-79b8-4ac1-a176-bd7ca31788f6" name="Default Changelist" comment="test using post">
+    <list default="true" id="2180b1b6-79b8-4ac1-a176-bd7ca31788f6" name="Default Changelist" comment="employee edit debug">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/employees.j2" beforeDir="false" afterPath="$PROJECT_DIR$/templates/employees.j2" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,69 +79,6 @@
       <workItem from="1644558963994" duration="902000" />
       <workItem from="1644822104742" duration="65000" />
       <workItem from="1645146175185" duration="2987000" />
-    </task>
-    <task id="LOCAL-00060" summary="typo in exemption insert query">
-      <created>1646371861303</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1646371861305</updated>
-    </task>
-    <task id="LOCAL-00061" summary="update add emp-vacc form">
-      <created>1646372110550</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1646372110550</updated>
-    </task>
-    <task id="LOCAL-00062" summary="typo">
-      <created>1646372516881</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1646372516881</updated>
-    </task>
-    <task id="LOCAL-00063" summary="debug exemptions">
-      <created>1646373019429</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1646373019429</updated>
-    </task>
-    <task id="LOCAL-00064" summary="debug exemptions">
-      <created>1646373275214</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1646373275215</updated>
-    </task>
-    <task id="LOCAL-00065" summary="debug exemptions">
-      <created>1646373484887</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1646373484887</updated>
-    </task>
-    <task id="LOCAL-00066" summary="debug employees">
-      <created>1646373684235</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1646373684236</updated>
-    </task>
-    <task id="LOCAL-00067" summary="update forms for autoincrementing ids">
-      <created>1646374342625</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1646374342627</updated>
-    </task>
-    <task id="LOCAL-00068" summary="remove form elements associated with auto incrementing ids">
-      <created>1646375193728</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1646375193730</updated>
     </task>
     <task id="LOCAL-00069" summary="update worksites">
       <created>1646375376046</created>
@@ -421,7 +360,70 @@
       <option name="project" value="LOCAL" />
       <updated>1646983125323</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL-00109" summary="test using post">
+      <created>1646983458771</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1646983458772</updated>
+    </task>
+    <task id="LOCAL-00110" summary="test using post">
+      <created>1646984181180</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1646984181181</updated>
+    </task>
+    <task id="LOCAL-00111" summary="test using post">
+      <created>1646984778644</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1646984778645</updated>
+    </task>
+    <task id="LOCAL-00112" summary="test using post">
+      <created>1646984913759</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1646984913759</updated>
+    </task>
+    <task id="LOCAL-00113" summary="update form style">
+      <created>1646985048270</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1646985048271</updated>
+    </task>
+    <task id="LOCAL-00114" summary="employee edit debug">
+      <created>1646986451155</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1646986451157</updated>
+    </task>
+    <task id="LOCAL-00115" summary="employee edit debug">
+      <created>1646986880191</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1646986880191</updated>
+    </task>
+    <task id="LOCAL-00116" summary="employee edit debug">
+      <created>1646987113958</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1646987113958</updated>
+    </task>
+    <task id="LOCAL-00117" summary="employee edit debug">
+      <created>1646987280130</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1646987280131</updated>
+    </task>
+    <option name="localTasksCounter" value="118" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -440,8 +442,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update exemptions handler for delete" />
-    <MESSAGE value="attempt to fix exemptions delete and filter for emp_vacc" />
     <MESSAGE value="forgot quotes" />
     <MESSAGE value="mismatched quote" />
     <MESSAGE value="emp_vacc search update" />
@@ -465,6 +465,8 @@
     <MESSAGE value="remove form action to check if it is the issue" />
     <MESSAGE value="try diff form action" />
     <MESSAGE value="test using post" />
-    <option name="LAST_COMMIT_MESSAGE" value="test using post" />
+    <MESSAGE value="update form style" />
+    <MESSAGE value="employee edit debug" />
+    <option name="LAST_COMMIT_MESSAGE" value="employee edit debug" />
   </component>
 </project>
