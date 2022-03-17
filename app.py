@@ -32,8 +32,8 @@ def employees():
             exemption_id = request.form["exemption_id"]
 
             # Account for null exemption_id
-            if exemption_id == '-1':
-                query = "INSERT INTO Employees (first_name, last_name, birthdate, termed, site_id) VALUES (%s, %s, %s, %s, %s)"
+            if exemption_id == -1:
+                query = "INSERT INTO Employees (first_name, last_name, birthdate, termed, site_id) VALUES (%s, %s, %s, %s, %s);"
                 cur = mysql.connection.cursor()
                 cur.execute(query, (first_name, last_name, birthdate, termed, site_id))
                 mysql.connection.commit()
