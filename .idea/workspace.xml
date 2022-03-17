@@ -78,20 +78,6 @@
       <workItem from="1644822104742" duration="65000" />
       <workItem from="1645146175185" duration="2987000" />
     </task>
-    <task id="LOCAL-00077" summary="update search to only allow searching for emp id with at least one emp_vacc">
-      <created>1646957684158</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1646957684163</updated>
-    </task>
-    <task id="LOCAL-00078" summary="update search query">
-      <created>1646958225033</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1646958225034</updated>
-    </task>
     <task id="LOCAL-00079" summary="attempt one implement delete for exemptions">
       <created>1646958622995</created>
       <option name="number" value="00079" />
@@ -421,7 +407,21 @@
       <option name="project" value="LOCAL" />
       <updated>1647560637532</updated>
     </task>
-    <option name="localTasksCounter" value="126" />
+    <task id="LOCAL-00126" summary="debug null exemption">
+      <created>1647561045210</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1647561045211</updated>
+    </task>
+    <task id="LOCAL-00127" summary="debug null exemption">
+      <created>1647561217510</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1647561217514</updated>
+    </task>
+    <option name="localTasksCounter" value="128" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
