@@ -51,7 +51,11 @@
             <option value="{{id['exemption_id']}}">{{id['exemption_id']}}</option>
             {% endif %}
             {% endfor %}
+            {% if (employee_info['exemption_id'] == -1) %}
+            <option value="-1" selected>N/A</option>
+            {% else %}
             <option value="-1">N/A</option>
+            {% endif %}
         </select><br>
         <input type="submit" name="update-confirm">
     </fieldset>
