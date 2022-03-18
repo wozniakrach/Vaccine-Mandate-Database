@@ -179,7 +179,7 @@ def exemptions():
 
             # No null inputs
             else:
-                query = "INSERT INTO Exemptions (exemption_status, exemption_type) VALUES (" + exemption_status + ", %s)"
+                query = "INSERT INTO Exemptions (exemption_status, exemption_type) VALUES (" + exemption_status + ", %s);"
                 cur = mysql.connection.cursor()
                 cur.execute(query, exemption_type)
                 mysql.connection.commit()
@@ -212,9 +212,9 @@ def vaccines():
             vaccine_manufacturer = request.form["vaccine_manufacturer"]
 
             # No null inputs allowed
-            query = "INSERT INTO Vaccines (vaccine_manufacturer) VALUES (%s)"
+            query = "INSERT INTO Vaccines (vaccine_manufacturer) VALUES (%s);"
             cur = mysql.connection.cursor()
-            cur.execute(query, (vaccine_manufacturer))
+            cur.execute(query, vaccine_manufacturer)
             mysql.connection.commit()
 
         # Redirect back to Vaccines page

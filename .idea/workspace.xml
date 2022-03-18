@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2180b1b6-79b8-4ac1-a176-bd7ca31788f6" name="Default Changelist" comment="fix add exemption handling">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="2180b1b6-79b8-4ac1-a176-bd7ca31788f6" name="Default Changelist" comment="exemptions add debug">
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,13 +77,6 @@
       <workItem from="1644558963994" duration="902000" />
       <workItem from="1644822104742" duration="65000" />
       <workItem from="1645146175185" duration="2987000" />
-    </task>
-    <task id="LOCAL-00088" summary="update handler for delete exemption">
-      <created>1646967423656</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1646967423656</updated>
     </task>
     <task id="LOCAL-00089" summary="add delete employees_vaccines functionality">
       <created>1646968183275</created>
@@ -422,7 +414,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647565532100</updated>
     </task>
-    <option name="localTasksCounter" value="137" />
+    <task id="LOCAL-00137" summary="exemptions add debug">
+      <created>1647566337928</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1647566337928</updated>
+    </task>
+    <option name="localTasksCounter" value="138" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -441,7 +440,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update exemption select" />
     <MESSAGE value="employees template formatting" />
     <MESSAGE value="fix exemptions/employee relationship to be 1:1" />
     <MESSAGE value="add template for edit employees + alter queries for route handler" />
@@ -466,6 +464,7 @@
     <MESSAGE value="debug termed insert employee" />
     <MESSAGE value="update employee termed check" />
     <MESSAGE value="fix add exemption handling" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix add exemption handling" />
+    <MESSAGE value="exemptions add debug" />
+    <option name="LAST_COMMIT_MESSAGE" value="exemptions add debug" />
   </component>
 </project>
