@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2180b1b6-79b8-4ac1-a176-bd7ca31788f6" name="Default Changelist" comment="exemptions add debug">
+    <list default="true" id="2180b1b6-79b8-4ac1-a176-bd7ca31788f6" name="Default Changelist" comment="debug vaccines">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,20 +78,6 @@
       <workItem from="1644558963994" duration="902000" />
       <workItem from="1644822104742" duration="65000" />
       <workItem from="1645146175185" duration="2987000" />
-    </task>
-    <task id="LOCAL-00089" summary="add delete employees_vaccines functionality">
-      <created>1646968183275</created>
-      <option name="number" value="00089" />
-      <option name="presentableId" value="LOCAL-00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1646968183275</updated>
-    </task>
-    <task id="LOCAL-00090" summary="quotes and form tags for employees template">
-      <created>1646968699541</created>
-      <option name="number" value="00090" />
-      <option name="presentableId" value="LOCAL-00090" />
-      <option name="project" value="LOCAL" />
-      <updated>1646968699542</updated>
     </task>
     <task id="LOCAL-00091" summary="accessing wrong form value for delete emp_vacc">
       <created>1646969198317</created>
@@ -421,7 +408,21 @@
       <option name="project" value="LOCAL" />
       <updated>1647566337928</updated>
     </task>
-    <option name="localTasksCounter" value="138" />
+    <task id="LOCAL-00138" summary="debug vaccines">
+      <created>1647566777394</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1647566777394</updated>
+    </task>
+    <task id="LOCAL-00139" summary="debug vaccines">
+      <created>1647566973039</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1647566973039</updated>
+    </task>
+    <option name="localTasksCounter" value="140" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -440,7 +441,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="employees template formatting" />
     <MESSAGE value="fix exemptions/employee relationship to be 1:1" />
     <MESSAGE value="add template for edit employees + alter queries for route handler" />
     <MESSAGE value="update forms/form action for employees update/delete" />
@@ -465,6 +465,7 @@
     <MESSAGE value="update employee termed check" />
     <MESSAGE value="fix add exemption handling" />
     <MESSAGE value="exemptions add debug" />
-    <option name="LAST_COMMIT_MESSAGE" value="exemptions add debug" />
+    <MESSAGE value="debug vaccines" />
+    <option name="LAST_COMMIT_MESSAGE" value="debug vaccines" />
   </component>
 </project>
