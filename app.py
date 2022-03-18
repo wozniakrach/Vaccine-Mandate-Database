@@ -179,9 +179,9 @@ def exemptions():
 
             # No null inputs
             else:
-                query = "INSERT INTO Exemptions (exemption_status, exemption_type) VALUES (" + exemption_status + ", %s);"
+                query = "INSERT INTO Exemptions (exemption_status, exemption_type) VALUES (" + exemption_status + ", '" + exemption_type + "');"
                 cur = mysql.connection.cursor()
-                cur.execute(query, (exemption_type))
+                cur.execute(query)
                 mysql.connection.commit()
 
             # redirect back to Exemptions page
