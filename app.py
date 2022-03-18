@@ -212,7 +212,7 @@ def vaccines():
             vaccine_manufacturer = request.form["vaccine_manufacturer"]
 
             # No null inputs allowed
-            query = "INSERT INTO Vaccines (vaccine_manufacturer) VALUES (" + vaccine_manufacturer + ");"
+            query = "INSERT INTO Vaccines (vaccine_manufacturer) VALUES ('" + vaccine_manufacturer + "');"
             cur = mysql.connection.cursor()
             cur.execute(query)
             mysql.connection.commit()
