@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2180b1b6-79b8-4ac1-a176-bd7ca31788f6" name="Default Changelist" comment="debug null exemption">
+    <list default="true" id="2180b1b6-79b8-4ac1-a176-bd7ca31788f6" name="Default Changelist" comment="debug termed update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
@@ -78,20 +78,6 @@
       <workItem from="1644558963994" duration="902000" />
       <workItem from="1644822104742" duration="65000" />
       <workItem from="1645146175185" duration="2987000" />
-    </task>
-    <task id="LOCAL-00082" summary="attempt to fix exemptions delete and filter for emp_vacc">
-      <created>1646962831782</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1646962831784</updated>
-    </task>
-    <task id="LOCAL-00083" summary="forgot quotes">
-      <created>1646962960066</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1646962960066</updated>
     </task>
     <task id="LOCAL-00084" summary="mismatched quote">
       <created>1646963113967</created>
@@ -422,7 +408,21 @@
       <option name="project" value="LOCAL" />
       <updated>1647562729625</updated>
     </task>
-    <option name="localTasksCounter" value="131" />
+    <task id="LOCAL-00131" summary="debug termed update">
+      <created>1647564329269</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1647564329270</updated>
+    </task>
+    <task id="LOCAL-00132" summary="debug termed update">
+      <created>1647564521760</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1647564521760</updated>
+    </task>
+    <option name="localTasksCounter" value="133" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -441,7 +441,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update handler for delete exemption" />
     <MESSAGE value="add delete employees_vaccines functionality" />
     <MESSAGE value="quotes and form tags for employees template" />
     <MESSAGE value="accessing wrong form value for delete emp_vacc" />
@@ -466,6 +465,7 @@
     <MESSAGE value="employee null exemption_id" />
     <MESSAGE value="employee null exemption_id for update form" />
     <MESSAGE value="debug null exemption" />
-    <option name="LAST_COMMIT_MESSAGE" value="debug null exemption" />
+    <MESSAGE value="debug termed update" />
+    <option name="LAST_COMMIT_MESSAGE" value="debug termed update" />
   </component>
 </project>
