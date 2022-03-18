@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2180b1b6-79b8-4ac1-a176-bd7ca31788f6" name="Default Changelist" comment="debug null exemption">
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edit_employees.j2" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edit_employees.j2" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,13 +78,6 @@
       <workItem from="1644558963994" duration="902000" />
       <workItem from="1644822104742" duration="65000" />
       <workItem from="1645146175185" duration="2987000" />
-    </task>
-    <task id="LOCAL-00079" summary="attempt one implement delete for exemptions">
-      <created>1646958622995</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1646958622997</updated>
     </task>
     <task id="LOCAL-00080" summary="change type for search filter">
       <created>1646960019540</created>
@@ -421,7 +415,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647561217514</updated>
     </task>
-    <option name="localTasksCounter" value="128" />
+    <task id="LOCAL-00128" summary="debug null exemption">
+      <created>1647561321163</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1647561321163</updated>
+    </task>
+    <option name="localTasksCounter" value="129" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
