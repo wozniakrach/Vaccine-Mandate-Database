@@ -33,16 +33,16 @@ def employees():
 
             # Account for null exemption_id
             if exemption_id == '-1':
-                query = "INSERT INTO Employees (first_name, last_name, birthdate, termed, site_id) VALUES (%s, %s, %s, %s, %s);"
+                query = "INSERT INTO Employees (first_name, last_name, birthdate, termed, site_id) VALUES (%s, %s, %s, %d, %s);"
                 cur = mysql.connection.cursor()
-                cur.execute(query, (first_name, last_name, birthdate, termed, site_id))
+                cur.execute(query, (first_name, last_name, birthdate, int(termed), site_id))
                 mysql.connection.commit()
 
             # If there are no null inputs
             else:
-                query = "INSERT INTO Employees (first_name, last_name, birthdate, termed, site_id, exemption_id) VALUES (%s, %s, %s, %s, %s, %s)"
+                query = "INSERT INTO Employees (first_name, last_name, birthdate, termed, site_id, exemption_id) VALUES (%s, %s, %s, %d, %s, %s)"
                 cur = mysql.connection.cursor()
-                cur.execute(query, (first_name, last_name, birthdate, termed, site_id, exemption_id))
+                cur.execute(query, (first_name, last_name, birthdate, int(termed), site_id, exemption_id))
                 mysql.connection.commit()
 
             # redirect back to Employees page
