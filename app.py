@@ -42,7 +42,7 @@ def employees():
             # If there are no null inputs
             else:
                 query = "INSERT INTO Employees (first_name, last_name, birthdate, termed, site_id, exemption_id) VALUES " \
-                        "(%s, %s, %s, " + termed + ", %s, %s)"
+                        "(%s, %s, %s, " + termed + ", %s, %s);"
                 cur = mysql.connection.cursor()
                 cur.execute(query, (first_name, last_name, birthdate, site_id, exemption_id))
                 mysql.connection.commit()
@@ -118,7 +118,7 @@ def edit_employees():
             data = cur.fetchall()
 
             # mySQL query to grab site_id for dropdown
-            site_query = "SELECT site_id FROM Worksites"
+            site_query = "SELECT site_id FROM Worksites;"
             cur = mysql.connection.cursor()
             cur.execute(site_query)
             site_options = cur.fetchall()
@@ -145,7 +145,7 @@ def worksites():
             manager_last = request.form["manager_last"]
 
             # No null inputs allowed
-            query = "INSERT INTO Worksites (location, department, manager_first, manager_last) VALUES (%s, %s, %s, %s)"
+            query = "INSERT INTO Worksites (location, department, manager_first, manager_last) VALUES (%s, %s, %s, %s);"
             cur = mysql.connection.cursor()
             cur.execute(query, (location, department, manager_first, manager_last))
             mysql.connection.commit()
@@ -238,7 +238,7 @@ def employees_vaccines():
             dose = request.form["dose"]
 
             # No null inputs allowed
-            query = "INSERT INTO Employees_Vaccines (employee_id, vaccine_id, date_administered, dose) VALUES (%s, %s, %s, %s)"
+            query = "INSERT INTO Employees_Vaccines (employee_id, vaccine_id, date_administered, dose) VALUES (%s, %s, %s, %s);"
             cur = mysql.connection.cursor()
             cur.execute(query, (employee_id, vaccine_id, date_administered, dose))
             mysql.connection.commit()
