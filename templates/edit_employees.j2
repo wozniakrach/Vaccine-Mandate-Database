@@ -21,7 +21,7 @@
         <input type="date" name="birthdate" value="{{employee_info['birthdate']}}" required/>
         <br>
         <label>Termed: </label>
-        {% if (employee_info['termed'] == 1) %}
+        {% if (employee['termed'].decode('utf-8') == '\x01') %}
         <input type="radio" name="termed" value="1" checked required>
         <label for="true">True</label>
         <input type="radio" name="termed" value="0">
